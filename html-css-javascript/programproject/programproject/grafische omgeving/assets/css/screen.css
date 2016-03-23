@@ -1,0 +1,83 @@
+
+/*---------------------*/
+/*    HTML ELEMENTS    */
+/*---------------------*/
+body{
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: Garamond, Cambria, 'Times New Roman', Times, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-image: url("../media/castle-02a.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: auto;
+
+}
+header{
+    margin-bottom: 50px;
+}
+div, h1{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#firstpage h2, #secondpage h2{
+
+    font-size: 5rem;
+}
+
+h1{
+
+    font-size: 5rem;
+}
+
+h2{
+
+    font-size: 3rem;
+}
+
+footer h3{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    text-align: center;
+
+
+}
+footer{
+    font-size: 2rem;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+
+
+/*---------------------*/
+/*  REUSABLE CLASSES   */
+/*---------------------*/
+
+.hide{
+    display: none;
+}
+
+
+/*---------------------*/
+/* CONTAINING ELEMENTS */
+/*---------------------*/
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+
+/*------------------------*/
+/* PAGE SPECIFIC ELEMENTS */
+/*------------------------*/
