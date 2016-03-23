@@ -1,4 +1,9 @@
 
+@font-face {
+    font-family: impact;
+    src: url(../fonts/impactreg.woff);
+}
+
 /*---------------------*/
 /*    HTML ELEMENTS    */
 /*---------------------*/
