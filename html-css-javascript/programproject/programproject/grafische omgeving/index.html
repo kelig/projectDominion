@@ -2,100 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>grafische omgeving dominion</title>
-    <meta name="author" content="stijn coppens">
+    <title>GUI Dominion</title>
+    <meta name="author" content="Zeger Deketelaere">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
 </head>
 <body>
-<header><h1>Dominion</h1></header>
 
-<div id="firstpage" class="hide" >
+<div id="wrapper">
+    <div id="header">
+        <header>
 
-    <h2><a href="#">play</a></h2>
+            <h1>Dominion</h1>
+
+        </header>
+    </div>
+
+    <div id="content">
+        <div id="firstpage" class="" >
+
+            <h2><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">play</a></h2>
+
+        </div>
+
+        <div id="secondpage" class="hide" >
+
+            <h2><a href="#">new game</a></h2>
+            <h2><a href="#">load game</a></h2>
+
+
+        </div>
+
+        <div id="thirdpageNewGame" class="hide">
+            <h2>configure new game</h2>
+                <ul>
+                    <li><h3><a href="#">2 players</a></h3></li>
+                    <li><h3><a href="#">3 players</a></h3></li>
+                </ul>
+                <ul>
+                    <li><h3><a href="#">4 players</a></h3></li>
+                    <li><h3><a href="#">5 players</a></h3></li>
+                </ul>
+        </div>
+
+
+
+        <div id="fourthpage" class="hide">
+            <h2>configure new game</h2>
+                <h3>name yourselves</h3>
+                    <form>
+                        <section>
+                        <label for="player1">player 1</label>
+                        <input type="text" id="player1" placeholder="name">
+                        </section>
+                        <label for="player2">player 2</label>
+                        <input type="text" id="player2" placeholder="name">
+                        <section>
+                        <label for="player3">player 3</label>
+                        <input type="text" id="player3" placeholder="name">
+                        </section>
+                        <section>
+                        <label for="player3">player 4</label>
+                        <input type="text" id="player4" placeholder="name">
+                        </section>
+                        <section>
+                        <label for="player3">player 5</label>
+                        <input type="text" id="player5" placeholder="name">
+                        </section>
+                            <br>
+                        <input type="submit" value="next">
+                    </form>
+        </div>
+
+        <div id="fifthpage" class="hide">
+            <h2>configure new game</h2>
+                <h3>choose your starter deck</h3>
+                    <ul>
+                        <li><h4><a href="#">first game</a></h4></li>
+                        <li><h4><a href="#">big money</a></h4></li>
+                        <li><h4><a href="#">interaction</a></h4></li>
+                        <li><h4><a href="#">village square</a></h4></li>
+                        <li><h4><a href="#">size distortion</a></h4></li>
+                        <br>
+                        <li><h4><a href="#">- make your own deck -</a></h4></li>
+                    </ul>
+
+
+        </div>
+
+
+
+        <div id="sixthpage" class="hide">
+
+            <h2>configure new game</h2>
+
+                <ul>
+                    <li><h3><a href="#">- Yes -</a></h3></li>
+                    <\br>
+                    <br>
+                    <li><h3><a href="#">- read the rules -</a></h3></li>
+                    <li><h3><a href="#">- change the configuration -</a></h3></li>
+                </ul>
+
+        </div>
+    </div>
+
+       <footer><h4>&copy; Shan Rizvi &  Brecht Dedecker & Stijn Coppens & Zeger Deketelaere</h4></footer>
+
 
 </div>
-
-<div id="secondpage" class="hide" >
-
-   <h2><a href="#">new game</a></h2>
-    <h2><a href="#">load game</a></h2>
-
-
-</div>
-
-<div id="thirdpageNewGame" class="hide">
-    <ul>
-        <li><h2><a href="#">2 spelers</a></h2></li>
-        <li><h2><a href="#">3 spelers</a></h2></li>
-        <li><h2><a href="#">4 spelers</a></h2></li>
-        <li><h2><a href="#">5 spelers</a></h2></li>
-
-    </ul>
-</div>
-
-
-
-<div id="fourthpage" class="hide">
-    <h1>configure new game</h1>
-    <h2>name yourselves</h2>
-
-    <form>
-    <label for="player1">player1</label>
-    <input type="text" id="player1" placeholder="name">
-    <label for="player2">player2</label>
-    <input type="text" id="player2" placeholder="name">
-    <label for="player3">player3</label>
-    <input type="text" id="player3" placeholder="name">
-        <br>
-        <input type="submit" value="next">
-</form>
-
-
-</div>
-
-<div id="fifthpage" class="hide">
-<h1>configure new game</h1>
-<h2>choose your starter pokemon</h2>
-    <ul>
-        <li><h2><a href="#">first game</a></h2></li>
-        <li><h2><a href="#">big money</a></h2></li>
-        <li><h2><a href="#">interaction</a></h2></li>
-        <li><h2><a href="#">village square</a></h2></li>
-        <li><h2><a href="#">size distortion</a></h2></li>
-        <br>
-        <li><h2><a href="#">-make your own deck-</a></h2></li>
-
-
-    </ul>
-
-
-</div>
-
-
-
-<div id="sixtpage">
-
-    <h1>are you ready?</h1>
-
-    <ul>
-        <li><h2><a href="#">-yes-</a></h2></li>
-        <br>
-        <br>
-        <li><h2><a href="#">-read the rules-</a></h2></li>
-        <li><h2><a href="#">-change the configuration-</a></h2></li>
-    </ul>
-
-</div>
-
-
-
-<footer><h3>&copy;Coppens Stijn, Zeger Deketelaere, Brecht Dedecker, Shan Rizvi</h3></footer>
-
-
-
-
-
 <script type="text/javascript" src=jquery-2.1.4.js></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
