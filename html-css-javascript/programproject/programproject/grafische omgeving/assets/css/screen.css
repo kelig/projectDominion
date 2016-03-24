@@ -17,12 +17,35 @@ body{
     background-repeat: no-repeat;
     background-position: 50% 10%;
     background-size: auto;
+    text-transform: capitalize;
 
 }
-header{
+
+
+
+header {
     margin-bottom: 50px;
 }
-div, h1{
+
+
+h1 {
+
+    font-size: 4rem;
+}
+
+h2 {
+
+    font-size: 6rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 3rem;
+
+}
+
+div, h1 {
 
     margin-left: auto;
     margin-right: auto;
@@ -31,25 +54,97 @@ div, h1{
     margin-bottom: 50px;
 }
 
-#firstpage h2, #secondpage h2{
+/*-----1st Page-----*/
 
-    font-size: 5rem;
+#firstpage h2 {
+    align-items: center;
+    margin-top: 25%;
 }
 
-h1{
+/*-----2nd Page-----*/
 
-    font-size: 5rem;
+#secondpage {
+    margin: 10%;
+    margin-top: 15%;
+    text-align: center;
 }
 
-h2{
+#secondpage h2 {
+    display: inline;
 
-    font-size: 3rem;
+}
+#secondpage h2:last-of-type {
+    margin-left: 5%;
+
 }
 
-footer h3{
+/*-----3th Page-----*/
+
+#thirdpageNewGame h2 {
+    margin: 5%;
+}
+
+#thirdpageNewGame h3 {
+    text-transform: none;
+}
+
+#thirdpageNewGame ul {
+    display: inline-block;
+    margin: 7.5%;
+}
+
+#thirdpageNewGame ul li {
+    padding: 2%;
+}
+
+/*-----4th Page-----*/
+#fourthpage h2, #fourthpage h3 {
+    margin: 5%;
+
+}
+
+form {
+    margin: 2%;
+}
+
+#fourthpage label {
+    font-size: 2rem;
+    display: block;
+
+}
+input[type=text], select {
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #909090;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #FF6000;
+}
+
+
+
+
+
+/*-----Footer-----*/
+footer h4{
     margin-left: auto;
     margin-right: auto;
-    width: 900px;
     text-align: center;
 
 
@@ -58,7 +153,7 @@ footer{
     font-size: 2rem;
     position: absolute;
     bottom: 10px;
-    width: 100%;
+    width: 75%;
 }
 
 
