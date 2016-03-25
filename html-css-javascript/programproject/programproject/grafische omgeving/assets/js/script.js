@@ -23,21 +23,11 @@ goToPlayers=function(e){
 
 };
 
-
-var goToPlayersFromSavedGame;
-goToPlayersFromSavedGame=function(e){
-    e.preventDefault();
-    $("#savedGame").toggleClass('hide');
-    $('#fourthpage').toggleClass('hide')
-
-};
-
-
 var goToLoadGame;
 goToLoadGame=function(e){
     e.preventDefault();
     $("#secondpage").toggleClass('hide');
-    $('#savedGame').toggleClass('hide')
+    $('#pageSavedGame').toggleClass('hide')
 
 };
 
@@ -83,6 +73,14 @@ sendPlayers=function(e){
 };
 
 
+var goBack;
+goBack=function(e){
+	$("#pageSavedGame").toggleClass('hide');
+    $('#secondpage').toggleClass('hide');
+};
+
+
+
 
 
 
@@ -97,8 +95,7 @@ playerSelector=function(){
     $('#threePlayers').on('click',playerScreenthree);
     $('#fourPlayers').on('click',playerScreenFour);
     $('#fivePlayers').on('click',playerScreenFive);
-
-
+    
 };
 
 
@@ -109,10 +106,10 @@ $(document).ready(function(){
     $('#play').on('click',startGame);
     $('#newGame').on('click',goToPlayers);
     $('#loadGame').on('click',goToLoadGame);
-    $('#makeOwnDeck').on('click',goToPlayersFromSavedGame);
+    $('#goBack').on('click',goBack);
+    
 
     playerSelector();
     $('#sendPlayers').on('click',sendPlayers);
 
 });
-
