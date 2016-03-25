@@ -70,6 +70,7 @@ div, h1 {
     margin: 10%;
     margin-top: 15%;
     text-align: center;
+    width: auto;
 }
 
 #secondpage h2 {
@@ -186,12 +187,15 @@ input[type=submit]:hover {
 #buildOwnDeckPage ul {
     display: inline-block;
     margin: 5%;
+    text-align: left;
+    vertical-align: middle;
 }
 
 #buildOwnDeckPage ul li {
     padding: 5%;
     display:block;
     width: 95%;
+
 }
 
 #buildOwnDeckPage ul li a {
@@ -202,6 +206,20 @@ input[type=submit]:hover {
 
     color: #FF6000;
 
+}
+
+/*-----savedGameOverviewPage-----*/
+
+
+#savedGame p{
+    font-size: 2rem;
+
+}
+
+#savedGame div {
+    margin-top: 3%;
+    text-align: left;
+    margin-left: 15%;
 }
 
 
@@ -218,7 +236,7 @@ footer{
     font-size: 2rem;
     position: absolute;
     bottom: 10px;
-    width: 75%;
+    width: 99%;
 }
 
 
@@ -240,7 +258,10 @@ a{
     color: #ffffff;
 }
 
+a:active {
 
+    color: #FF6000;
+}
 
 
 /*------------------------*/
