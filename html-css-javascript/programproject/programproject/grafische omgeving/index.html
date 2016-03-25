@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GUI Dominion</title>
-    <meta name="author" content="Zeger Deketlaere & Stijn Coppens">
+    <meta name="author" content="Zeger Deketelaere & Stijn Coppens">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
 </head>
@@ -19,7 +19,7 @@
     </div>
 
     <div id="content">
-        <div id="firstpage" class="hide" >
+        <div id="firstpage" class="" >
 
             <h2><a href="#" id="play">play</a></h2>
 
@@ -29,7 +29,6 @@
 
             <h2><a href="#" id="newGame">new game</a></h2>
             <h2><a href="#" id="loadGame">load game</a></h2>
-
         </div>
 
         <div id="thirdpageNewGame" class="hide">
@@ -42,12 +41,11 @@
                     <li><h3><a href="#" id="fourPlayers">4 players</a></h3></li>
                     <li><h3><a href="#" id="fivePlayers">5 players</a></h3></li>
                 </ul>
-
         </div>
 
 
 
-        <div id="fourthpage" class="hide">
+                <div id="fourthpage" class="hide">
             <h2>configure new game</h2>
                 <h3>name yourselves</h3>
                     <form>
@@ -57,22 +55,23 @@
                         </section>
                         <label for="player2">player 2</label>
                         <input type="text" id="player2" placeholder="name">
-                        <section class="hide">
+                        <section id='extraPlayerOne'  class="hide">
                         <label for="player3">player 3</label>
                         <input type="text" id="player3" placeholder="name">
                         </section>
-                        <section class="hide">
+                        <section id='extraPlayerTwo'   class="hide">
                         <label for="player3">player 4</label>
                         <input type="text" id="player4" placeholder="name">
                         </section>
-                        <section class="hide">
+                        <section id='extraPlayerThree'  class="hide">
                         <label for="player3">player 5</label>
                         <input type="text" id="player5" placeholder="name">
                         </section>
                             <br>
-                        <input type="submit" value="next">
+                        <input type="submit" value="next" id='sendPlayers'>
                     </form>
         </div>
+
 
         <div id="fifthpage" class="hide">
             <h2>configure new game</h2>
@@ -105,59 +104,9 @@
                 </ul>
 
         </div>
-
-        <div id="buildOwnDeckPage" class="">
-            <h2>configure new game</h2>
-                <h3>- build your deck - pick 10 cards -</h3>
-            <div id="pickTenCards">
-                <ul>
-                    <li><a href="#"id="adventurer">adventurer</a></li>
-                    <li><a href="#"id="bureaucrat">bureaucrat</a></li>
-                    <li><a href="#"id="cellar">cellar</a></li>
-                    <li><a href="#"id="chancellor">chancellor</a></li>
-                    <li><a href="#"id="chapel">chapel</a></li>
-
-                </ul>
-                <ul>
-                    <li><a href="#"id="councilRoom">council room</a></li>
-                    <li><a href="#"id="feast">feast</a></li>
-                    <li><a href="#"id="festival">festival</a></li>
-                    <li><a href="#"id="gardens">gardens</a></li>
-                    <li><a href="#"id="labratory">labratory</a></li>
-
-                </ul>
-                <ul>
-                    <li><a href="#"id="library">library</a></li>
-                    <li><a href="#"id="market">market</a></li>
-                    <li><a href="#"id="militia">militia</a></li>
-                    <li><a href="#"id="mine">mine</a></li>
-                    <li><a href="#"id="moat">moat</a></li>
-
-                </ul>
-                <ul>
-                    <li><a href="#"id="moneylender">moneylender</a></li>
-                    <li><a href="#"id="remodel">remodel</a></li>
-                    <li><a href="#"id="smithy">smithy</a></li>
-                    <li><a href="#"id="spy">spy</a></li>
-                    <li><a href="#"id="thief">thief</a></li>
-
-                </ul>
-                <ul>
-                    <li><a href="#"id="throneRoom">throne Room</a></li>
-                    <li><a href="#"id="village">village</a></li>
-                    <li><a href="#"id="witch">witch</a></li>
-                    <li><a href="#"id="woodcutter">woodcutter</a></li>
-                    <li><a href="#"id="workshop">workshop</a></li>
-
-                </ul>
-            </div>
-            <input type="submit" value="next">
-
-        </div>
-
     </div>
 
-       <footer class="hide"><h4>&copy; Shan Rizvi &  Brecht Dedecker & Stijn Coppens & Zeger Deketelaere</h4></footer>
+       <footer><h4>&copy; Shan Rizvi &  Brecht Dedecker & Stijn Coppens & Zeger Deketelaere</h4></footer>
 
 
 </div>
