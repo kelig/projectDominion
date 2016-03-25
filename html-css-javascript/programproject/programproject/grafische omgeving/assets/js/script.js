@@ -57,11 +57,21 @@ playerScreentwo=function(e){
 	 $('#fourthpage').toggleClass('hide')
 };
 
+var sendPlayers;
+sendPlayers=function(e){
+	$("#fourthpage").toggleClass('hide');
+	$('#fifthpage').toggleClass('hide');
+};
+
+
+
+
 
 var testJavascript=function(){
 	alert('this website is now online');
 };
 
+//collection of functions for choosing players
 var playerSelector;
 playerSelector=function(){
 	$('#twoPlayers').on('click',playerScreentwo);
@@ -73,11 +83,14 @@ playerSelector=function(){
 
 
 
+
 $(document).ready(function(){
-	//testJavascript();
+	testJavascript();
 	$('#play').on('click',startGame);
 	$('#newGame').on('click',goToPlayers);
 	playerSelector();
-	
+	$('#sendPlayers').on('click',sendPlayers);
+
 });
+
 
