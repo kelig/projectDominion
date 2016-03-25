@@ -62,15 +62,22 @@ var testJavascript=function(){
 	alert('this website is now online');
 };
 
-
-$(document).ready(function(){
-	testJavascript();
-	$('#play').on('click',startGame);
-	$('#newGame').on('click',goToPlayers);
+var playerSelector;
+playerSelector=function(){
 	$('#twoPlayers').on('click',playerScreentwo);
 	$('#threePlayers').on('click',playerScreenthree);
 	$('#fourPlayers').on('click',playerScreenFour);
 	$('#fivePlayers').on('click',playerScreenFive);
+	
+};
+
+
+
+$(document).ready(function(){
+	//testJavascript();
+	$('#play').on('click',startGame);
+	$('#newGame').on('click',goToPlayers);
+	playerSelector();
 	
 });
 
