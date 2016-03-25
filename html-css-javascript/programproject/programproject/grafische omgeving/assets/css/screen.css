@@ -16,7 +16,7 @@ body{
     background-image: url("../media/castle-02a.jpg");
     background-repeat: no-repeat;
     background-position: 50% 10%;
-    background-size: cover;
+    background-size: auto;
     text-transform: capitalize;
 
 }
@@ -31,8 +31,6 @@ header {
 h1 {
 
     font-size: 4rem;
-    width: 80%;
-
 }
 
 h2 {
@@ -52,7 +50,7 @@ div, h1 {
 
     margin-left: auto;
     margin-right: auto;
-    width: 99%;
+    width: 80%;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -70,18 +68,20 @@ div, h1 {
     margin: 10%;
     margin-top: 15%;
     text-align: center;
-    width: auto;
 }
 
 #secondpage h2 {
     display: inline;
 
 }
+#secondpage h2:last-of-type {
+    margin-left: 10px;
 
+}
 
 /*-----3th Page-----*/
 
-
+}
 
 #thirdpageNewGame h3 {
     text-transform: none;
@@ -136,22 +136,6 @@ input[type=submit]:hover {
     background-color: #FF6000;
 }
 
-/*-----Fifth Page-----*/
-
-#fifthpage ul li h4 {
-    font-size: 3rem;
-    margin:1%;
-}
-
-#fifthpage h3 {
-    margin: 5%;
-}
-
-#fifthpage h3 a:hover {
-    color: #FF6000;
-}
-
-
 /*-----Sixth Page-----*/
 
 
@@ -175,54 +159,20 @@ input[type=submit]:hover {
     margin:5%;
 }
 
+/*-----Fifth Page-----*/
 
-/*-----buildOwnDeck Page-----*/
-
-
-
-#buildOwnDeckPage {
-
+#fifthpage ul li h4 {
+    font-size: 3rem;
+    margin:1%;
 }
 
-#buildOwnDeckPage ul {
-    display: inline-block;
+#fifthpage h3 {
     margin: 5%;
-    text-align: left;
-    vertical-align: middle;
 }
 
-#buildOwnDeckPage ul li {
-    padding: 5%;
-    display:block;
-    width: 95%;
-
-}
-
-#buildOwnDeckPage ul li a {
-    font-size: 2rem;
-
-}
-#buildOwnDeckPage ul li a:active {
-
+#fifthpage h3 a:hover {
     color: #FF6000;
-
 }
-
-/*-----savedGameOverviewPage-----*/
-
-
-#savedGame p{
-    font-size: 2rem;
-
-}
-
-#savedGame div {
-    margin-top: 3%;
-    text-align: left;
-    margin-left: 15%;
-}
-
-
 
 /*-----Footer-----*/
 footer h4{
@@ -236,7 +186,7 @@ footer{
     font-size: 2rem;
     position: absolute;
     bottom: 10px;
-    width: 99%;
+    width: 75%;
 }
 
 
@@ -258,10 +208,7 @@ a{
     color: #ffffff;
 }
 
-a:active {
 
-    color: #FF6000;
-}
 
 
 /*------------------------*/
