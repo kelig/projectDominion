@@ -73,7 +73,7 @@ div, h1 {
 }
 
 #secondpage h2 {
-    display: inline;
+    display: inline-block;
 
 }
 
