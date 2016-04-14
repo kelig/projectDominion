@@ -255,6 +255,9 @@ footer{
     display: none;
 }
 
+input[type=checkbox].hide{
+    display:none;
+}
 
 /*---------------------*/
 /* CONTAINING ELEMENTS */
