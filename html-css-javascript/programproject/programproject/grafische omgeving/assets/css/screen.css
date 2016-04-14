@@ -17,7 +17,9 @@ body{
     background-position: 50% 10%;
     background-size: auto;
     text-transform: capitalize;
-
+    -moz-transform: scale(0.8, 0.8);
+    zoom: 0.8;
+    zoom: 80%;
 }
 
 
@@ -276,4 +278,3 @@ a:active {
 /*------------------------*/
 /* PAGE SPECIFIC ELEMENTS */
 /*------------------------*/
- 
