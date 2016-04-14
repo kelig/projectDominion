@@ -11,7 +11,10 @@
 
 <div id="wrapper">
     <div id="header">
+     <!-- 
       <iframe width="0" height="0" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&autoplay=1" frameborder="0"></iframe>
+       -->
+        
         <header>
 
             <h1>Dominion</h1>
@@ -82,7 +85,7 @@
                 <li><h4><a href="#" id="firstGame">first game</a></h4></li>
                 <li><h4><a href="#" id="bigMoney">big money</a></h4></li>
                 <li><h4><a href="#" id="interaction">interaction</a></h4></li>
-                <li><h4><a href="#" id="villageStatie">village square</a></h4></li>
+                <li><h4><a href="#" id="villageSquare">village square</a></h4></li>
                 <li><h4><a href="#" id="sizeDistortion">size distortion</a></h4></li>
             </ul>
             <h3><a href="#" id="makeOwnDeck">- make your own deck -</a></h3>
@@ -110,48 +113,52 @@
             <h2>configure new game</h2>
             <h3>- build your deck - pick 10 cards -</h3>
             <div id="pickTenCards">
+            <form>
                 <ul>
-                    <li><a href="#"id="adventurer">adventurer</a></li>
-                    <li><a href="#"id="bureaucrat">bureaucrat</a></li>
-                    <li><a href="#"id="cellar">cellar</a></li>
-                    <li><a href="#"id="chancellor">chancellor</a></li>
-                    <li><a href="#"id="chapel">chapel</a></li>
+                    <li><input type='checkbox' id='adventurer'>
+                    <label for='adventurer'>adventurer</label></li>
+                    <li>bureaucrat</li>
+                    <li>cellar</li>
+                    <li>chancellor</li>
+                    <li>chapel</li>
 
                 </ul>
                 <ul>
-                    <li><a href="#"id="councilRoom">council room</a></li>
-                    <li><a href="#"id="feast">feast</a></li>
-                    <li><a href="#"id="festival">festival</a></li>
-                    <li><a href="#"id="gardens">gardens</a></li>
-                    <li><a href="#"id="labratory">labratory</a></li>
+                    <li>council room</li>
+                    <li>feast</li>
+                    <li>festival</li>
+                    <li>gardens</li>
+                    <li>labratory</li>
 
                 </ul>
                 <ul>
-                    <li><a href="#"id="library">library</a></li>
-                    <li><a href="#"id="market">market</a></li>
-                    <li><a href="#"id="militia">militia</a></li>
-                    <li><a href="#"id="mine">mine</a></li>
-                    <li><a href="#"id="moat">moat</a></li>
+                    <li>library</li>
+                    <li>market</li>
+                    <li>militia</li>
+                    <li>mine</li>
+                    <li>moat</li>
 
                 </ul>
                 <ul>
-                    <li><a href="#"id="moneylender">moneylender</a></li>
-                    <li><a href="#"id="remodel">remodel</a></li>
-                    <li><a href="#"id="smithy">smithy</a></li>
-                    <li><a href="#"id="spy">spy</a></li>
-                    <li><a href="#"id="thief">thief</a></li>
+                    <li>moneylender</li>
+                    <li>remodel</li>
+                    <li>smithy</li>
+                    <li>spy</li>
+                    <li>thief</li>
 
                 </ul>
                 <ul>
-                    <li><a href="#"id="throneRoom">throne Room</a></li>
-                    <li><a href="#"id="village">village</a></li>
-                    <li><a href="#"id="witch">witch</a></li>
-                    <li><a href="#"id="woodcutter">woodcutter</a></li>
-                    <li><a href="#"id="workshop">workshop</a></li>
+                    <li>throne Room</li>
+                    <li>village</li>
+                    <li>witch</li>
+                    <li>woodcutter</li>
+                    <li>workshop</li>
 
                 </ul>
             </div>
-            <input type="submit" value="next">
+            <input type="submit" value="next" id='SendDeck'>
+            </form>
+            
 
         </div>
 
