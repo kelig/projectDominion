@@ -193,19 +193,24 @@ input[type=submit]:hover {
 #buildOwnDeckPage ul li {
     padding: 5%;
     display:block;
-    width: 95%;
-
-}
-
-#buildOwnDeckPage ul li a {
+    width: 100%;
     font-size: 2rem;
 
 }
-#buildOwnDeckPage ul li a:active {
+
+
+input[type="checkbox"]:checked +label{
 
     color: #FF6000;
 
 }
+input[type="checkbox"],
+input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
 
 /*-----savedGameOverviewPage-----*/
 
