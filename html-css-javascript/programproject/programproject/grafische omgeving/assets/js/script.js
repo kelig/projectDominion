@@ -132,11 +132,28 @@ chooseDeck=function(e){
 	}
 	
 };
+/**
+ * Maximum 10 aanduiden met checkbox
+ */
+
+var $allChecked = $("input[type=checkbox]");
+$("input[type=checkbox]").change(checkMaxNumber);
+
+function checkMaxNumber() {
+    var $ac = $(this),
+        amount = $("input[type=checkbox]:checked").length;
+    $("input[type=checkbox]:not(:checked)").prop("disabled", amount >= 10);
+
+}
+
+/**
+ * Maximum 10 aanduiden met checkbox /END
+ */
 var startgame;
 startgame=function(e){
 	e.preventDefault();
 	
-}
+};
 var addtodeck;
 addtodeck=function(e){
 	e.preventDefault();
@@ -144,7 +161,9 @@ addtodeck=function(e){
 	console.log(getId);
 	
 	
-}
+};
+
+
 
 $(document).ready(function(){
     testJavascript();
@@ -152,7 +171,7 @@ $(document).ready(function(){
     $('#newGame').on('click',goToPlayers);
     $('#loadGame').on('click',goToLoadGame);
     $('#goBack').on('click',goBack);
-    $('#playGame').on('click',startLoadedGame)
+    $('#playGame').on('click',startLoadedGame);
     playerSelector();
     $('#sendPlayers').on('click',sendPlayers);
     $('a').on('click',chooseDeck);
