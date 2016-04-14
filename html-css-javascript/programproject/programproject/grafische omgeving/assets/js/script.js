@@ -1,181 +1,128 @@
 /**
- * Created by Stijn on 22/03/2016.
+ * Created by Stijn on 11/01/2016.
  */
 
+var toppings = ['beef', 'cheddar', 'cucumber', 'emmentaler', 'salad', 'tomato'];
+var toppinglist = ' ';
+//buttons toevoegen voor toppings
+var toppingkeuze;
+toppingkeuze=function() {
+    for (var i = 0, len = toppings.length; i < len; i++) {
+        var html = '<a class="';
+        html += toppings[i]+'">';
+        html +=toppings[i];
+        html +='</a>';
+        $(".buttons").append(html);
+    }
+};
 
+//topping toegoegen aan de hamburger
+var toppingtoevoegen;
+toppingtoevoegen=function(){
+    var topping = $(this).attr('class');
+    console.log(topping);
+    var html2 = '<img src="images/';
+    html2+=topping;
+    html2+='.svg"';
+    html2+='alt="' +topping +'" title="'+topping+'"';
+    html2+='/>';
+    $(".toppings").append(html2);
 
-var startGame;
-startGame=function(e){
+    toppinglist+=topping+' ';
+};
+
+//als je op enter your details klikt wordt de volgende stap weergegeven
+var next;
+next=function(e){
     e.preventDefault();
-    $("#firstpage").toggleClass('hide');
-    $("#secondpage").toggleClass('hide');
-    $("footer").toggleClass('hide');
+    $('.cf').removeClass('first');
+    $('#second').addClass('first').addClass('cf');
+
 };
 
 
-var goToPlayers;
-goToPlayers=function(e){
+// het versturen van de gegevens
+var versturen;
+versturen=function(e) {
     e.preventDefault();
-    $("#secondpage").toggleClass('hide');
-    $('#thirdpageNewGame').toggleClass('hide')
+    //ga naar de volgende pagina
+    $('.cf').removeClass('first');
+    $('#third').addClass('first').addClass('cf');
+    storage();
 
 };
 
-var goToLoadGame;
-goToLoadGame=function(e){
-    e.preventDefault();
-    $("#secondpage").toggleClass('hide');
-    $('#pageSavedGame').toggleClass('hide')
+//opslaan gegevens
+var storage;
+storage=function(){
+    // welk soort hamburger is het
+var id=$('input[type="radio"]').attr('id');
+    switch (id) {
+        case 'Regular':
+            soort='Regular';
+            break;
+        case 'Organic':
+            soort='Organic';
+            break;
+        case 'Supersize':
+            soort='Supersize';
+    }
+// zet alle gegevens in een item
+    var item = {
+        naam: $('#Name').val(),
+        email: $('#email').val(),
+        adres: $('#address').val(),
+        naamHamburger: $('#naamhamburger').val(),
+        typeHamburger: soort,
+        toppings: toppinglist
 
+    };
+    // steek de hamburger in localstorage
+    naamstorage=item.naamHamburger;
+    console.log(item);
+    if (typeof(Storage) !== "undefined") {
+
+        localStorage.setItem(naamstorage, JSON.stringify(item));
+
+    }
+    else {
+        window.alert('Sorry! No Web Storage support...');
+    }
 };
-
-
-var playerScreenFive;
-playerScreenFive=function(e){
-    e.preventDefault();
-    $("#thirdpageNewGame").toggleClass('hide');
-    $('#fourthpage').toggleClass('hide')
-    $('#extraPlayerOne').toggleClass('hide')
-    $('#extraPlayerTwo').toggleClass('hide')
-    $('#extraPlayerThree').toggleClass('hide')
-
-};
-var playerScreenFour;
-playerScreenFour=function(e){
-    e.preventDefault();
-    $("#thirdpageNewGame").toggleClass('hide');
-    $('#fourthpage').toggleClass('hide')
-    $('#extraPlayerOne').toggleClass('hide')
-    $('#extraPlayerTwo').toggleClass('hide')
-
-};
-var playerScreenthree;
-playerScreenthree=function(e){
-    e.preventDefault();
-    $("#thirdpageNewGame").toggleClass('hide');
-    $('#fourthpage').toggleClass('hide')
-    $('#extraPlayerOne').toggleClass('hide')
-};
-
-var playerScreentwo;
-playerScreentwo=function(e){
-    e.preventDefault();
-    $("#thirdpageNewGame").toggleClass('hide');
-    $('#fourthpage').toggleClass('hide')
-};
-
-var sendPlayers;
-sendPlayers=function(e){
-	e.preventDefault();
-    $("#fourthpage").toggleClass('hide');
-    $('#fifthpage').toggleClass('hide');
-};
-
-
-var goBack;
-goBack=function(e){
-	$("#pageSavedGame").toggleClass('hide');
-    $('#secondpage').toggleClass('hide');
-};
-
-var startLoadedGame;
-startLoadedGame=function(e){
-	console.log('je moe nog altijd ajax doen');
-};
-
-
-
-
-var testJavascript=function(){
-    alert('this website is now online');
-};
-
-//collection of functions for choosing players
-var playerSelector;
-playerSelector=function(){
-    $('#twoPlayers').on('click',playerScreentwo);
-    $('#threePlayers').on('click',playerScreenthree);
-    $('#fourPlayers').on('click',playerScreenFour);
-    $('#fivePlayers').on('click',playerScreenFive);
-    
-};
-
-
-
-var chooseDeck;
-chooseDeck=function(e){
-	e.preventDefault();
-	var getId = $(this).attr('id');
-	switch (getId)
-	{
-	   case "firstGame":
-	       alert('firstGame');
-	       break;
-	   case "bigMoney":
-	       alert('bigMoney');
-	       break;
-	   case "interaction":
-	       alert('interaction');
-	       break;
-	   case "villageSquare":
-	       alert('villageSquare');
-	       break;
-	   case "sizeDistortion":
-	       alert('sizeDistortion');
-	       break;
-	   case "makeOwnDeck":
-		   $('#fifthpage').toggleClass('hide');
-		   $('#buildOwnDeckPage').toggleClass('hide');
-		   
-		   break;
-	   default:
-	}
-	
-};
-/**
- * Maximum 10 aanduiden met checkbox
- */
-
-var $allChecked = $("input[type=checkbox]");
-$("input[type=checkbox]").change(checkMaxNumber);
-
-function checkMaxNumber() {
-    var $ac = $(this),
-        amount = $("input[type=checkbox]:checked").length;
-    $("input[type=checkbox]:not(:checked)").prop("disabled", amount >= 10);
-
-}
 
 /**
- * Maximum 10 aanduiden met checkbox /END
- */
-var startgame;
-startgame=function(e){
-	e.preventDefault();
-	
-};
-var addtodeck;
-addtodeck=function(e){
-	e.preventDefault();
-	var getId = $(this).attr('id');
-	console.log(getId);
-	
-	
-};
+var GemaakteHamburgers;
+GemaakteHamburgers=function(){
+// hamburger uit localstorage halen
+
+    var hamburger = JSON.parse(localStorage.getItem());
+    // hamburgers toevoegen onderaan
+    console.log(hamburger);
+    var klasse;
+    if( hamburger.typehamburger == Organic){
+        klasse='o'
+    }
+    if (hamburger.typehamburger == Supersize) {
+            klasse = 's'
+    }
+    else{
+    klasse=""
+    }
+
+    var html3='<li class="'+klasse+'">';
+    html3+=hamburger;
+    html3+='</li>';
+    $('aside ul').append(html3);
 
 
+};
+**/
 
 $(document).ready(function(){
-    testJavascript();
-    $('#play').on('click',startGame);
-    $('#newGame').on('click',goToPlayers);
-    $('#loadGame').on('click',goToLoadGame);
-    $('#goBack').on('click',goBack);
-    $('#playGame').on('click',startLoadedGame);
-    playerSelector();
-    $('#sendPlayers').on('click',sendPlayers);
-    $('a').on('click',chooseDeck);
-    $('#buildOwnDeckPage a').on('click',addtodeck);
-    $('#readyYes').on('click',startgame);
+    toppingkeuze();
+    //GemaakteHamburgers();
+    $('.buttons a').on('click',toppingtoevoegen);
+    $('.next').on('click',next);
+    $("#versturen").on('click',versturen);
 
 });
