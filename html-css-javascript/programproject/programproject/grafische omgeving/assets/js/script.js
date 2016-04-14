@@ -4,8 +4,6 @@
 
 
 
-// als je op een link drukt zal je naar de volgende pagina gaan
-
 var startGame;
 startGame=function(e){
     e.preventDefault();
@@ -68,6 +66,7 @@ playerScreentwo=function(e){
 
 var sendPlayers;
 sendPlayers=function(e){
+	e.preventDefault();
     $("#fourthpage").toggleClass('hide');
     $('#fifthpage').toggleClass('hide');
 };
@@ -79,7 +78,10 @@ goBack=function(e){
     $('#secondpage').toggleClass('hide');
 };
 
-
+var startLoadedGame;
+startLoadedGame=function(e){
+	console.log('je moe nog altijd ajax doen');
+};
 
 
 
@@ -100,6 +102,49 @@ playerSelector=function(){
 
 
 
+var chooseDeck;
+chooseDeck=function(e){
+	e.preventDefault();
+	var getId = $(this).attr('id');
+	switch (getId)
+	{
+	   case "firstGame":
+	       alert('firstGame');
+	       break;
+	   case "bigMoney":
+	       alert('bigMoney');
+	       break;
+	   case "interaction":
+	       alert('interaction');
+	       break;
+	   case "villageSquare":
+	       alert('villageSquare');
+	       break;
+	   case "sizeDistortion":
+	       alert('sizeDistortion');
+	       break;
+	   case "makeOwnDeck":
+		   $('#fifthpage').toggleClass('hide');
+		   $('#buildOwnDeckPage').toggleClass('hide');
+		   
+		   break;
+	   default:
+	}
+	
+};
+var startgame;
+startgame=function(e){
+	e.preventDefault();
+	
+}
+var addtodeck;
+addtodeck=function(e){
+	e.preventDefault();
+	var getId = $(this).attr('id');
+	console.log(getId);
+	
+	
+}
 
 $(document).ready(function(){
     testJavascript();
@@ -107,9 +152,11 @@ $(document).ready(function(){
     $('#newGame').on('click',goToPlayers);
     $('#loadGame').on('click',goToLoadGame);
     $('#goBack').on('click',goBack);
-    
-
+    $('#playGame').on('click',startLoadedGame)
     playerSelector();
     $('#sendPlayers').on('click',sendPlayers);
+    $('a').on('click',chooseDeck);
+    $('#buildOwnDeckPage a').on('click',addtodeck);
+    $('#readyYes').on('click',startgame);
 
 });
