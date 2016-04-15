@@ -36,7 +36,7 @@ public class Functions {
 		};
 		
 	public void setup(Player p) {
-		
+		//standard deck setup
 		ArrayList<Card> deck = new ArrayList<>();
 			for(int i =0; i<7;i++){
 				
