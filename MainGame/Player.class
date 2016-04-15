@@ -2,8 +2,6 @@ package MainGame;
 
 import java.util.ArrayList;
 
-import javax.swing.Spring;
-
 import MainGame.Functions.Card;
 
 public class Player {
@@ -16,13 +14,6 @@ public class Player {
 		private int purchases;
 		private int moneyTurn; //hoeveel dat persoon kan spenderen in 1 beurt
 	
-		public Player(String name){
-			this.name = name;
-			actions =1; 
-			purchases =1 ;		
-				
-			
-		}
 		
 		public int getActions(){
 			
@@ -73,17 +64,13 @@ public class Player {
 			discarded = newDiscarded;
 		}
 		
-	
-		public void setHand(ArrayList<Card> newHand) {
+		public void setDHand(ArrayList<Card> newHand){
 			hand = newHand;
-			
 		}
-
-		
-		
+		 
 		
 	}; 	
 	
 	
 	
-
+	};

@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+import MainGame.Functions.Card;
 
-public class Functions {
+class Functions {
 
 	
 /**	public static void main(String[] args) {
@@ -77,41 +78,30 @@ public class Functions {
 	        
 	        
 															
-		};
-		p.setHand(hand);
-		
-		p.setDeck(deck);
+		};	
+		//DiscardHand();
 		
 	};
 			
-	public void discardHand(Player p, int aantal){
+	public void discardHand(){
 	
 	System.out.println("DiscardedHand");
 	
-	ArrayList<Card>hand = p.getHand(); 
-	ArrayList<Card>discarded = p.getDiscarded();
-	
-	for(int i= 0; i<aantal; i++){
+	for(int i= 0; i<hand.size(); i++){
 		
 		Card kaart = hand.get(i);
 		discarded.add(kaart);
 		
 	};
-	
-	p.setHand(hand);
-	p.setDiscarded(discarded);
+	hand.clear();
 				
 	};
 	
 	
-	public void newDeck(Player p){
+	public void newDeck(){
 	
 		//Kijken of aantal kaarten in deck <5
-		
-		int totaalAantal = p.getDeck().size();
-		ArrayList<Card>discarded = p.getDiscarded();
-		ArrayList<Card> deck = p.getDeck();
-		
+		int totaalAantal = deck.size();			
 		if(totaalAantal<5){
 			
 			System.out.println("Discard word deck"); 	
@@ -124,7 +114,7 @@ public class Functions {
 
 		else{
 			System.out.println("Deck is groot genoeg");
-			drawCards(p,5);
+			drawCards(5);
 		}
 			
 		
@@ -136,24 +126,20 @@ public class Functions {
 	};	
 	
 	
-	public void koperBuy(Player p, int aantal){
+	public void koperBuy(){
 	    	
-		ArrayList<Card> discarded = p.getDiscarded();
-		
-		 for(int i =0; i<aantal;i++){
-			 discarded.add(new Card("koper"));
-		 }
+	    	deck.add(new Card("koper"));
 	    	
 	    	
 	    };
    
 
-	public void turnGoTrough(Player p){
+	public void turnGoTrough(){
 		
 		System.out.println("TurnStart");
 		System.out.println("DrawPhase");
 		
-		drawCards(p,5);
+		drawCards(5);
 		
 		System.out.println("ActionPhase, next = n");
 		
@@ -178,7 +164,7 @@ public class Functions {
 			String keuze = input.nextLine(); 
 			if(keuze.equals("p")){
 				
-				koperBuy(p,1);
+				koperBuy();
 				p.spelerAP(0,-1);
 				int AantalPurchases2 = p.getPurchases();
 				System.out.println("U hebt nog "+AantalPurchases2 + " buys over");
@@ -190,7 +176,7 @@ public class Functions {
 				String end = input.nextLine();
 				if(end != null){
 					
-					discardHand(p,5);
+					discardHand();
 					
 				};
 			
@@ -202,7 +188,7 @@ public class Functions {
 			String end = input.nextLine();
 			if(end != null){
 				
-				discardHand(p,p.getHand().size());		
+				discardHand();		
 			
 			};
 			
