@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GUI Dominion</title>
+    <meta name="author" content="Zeger Deketlaere & Stijn Coppens">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
+</head>
+<body>
+
+<header>
+    <h1>Dominion</h1>
+</header>
+
+
+<section id="firstPage">
+    <div>
+    <h2><a href="#" id="play">play</a></h2>
+    </div>
+</section>
+
+<section id="secondPage" class="hide" >
+    <div>
+        <h2><a href="#" id="setUpNewGame">New Game</a></h2>
+        <h2><a href="#" id="loadGame">Load game</a> </h2>
+    </div>
+</section>
+
+<section id="thirdPageNewGame" class="hide">
+    <div class="playerSelection">
+        <h3>With how many will you play?</h3>
+
+        <ul>
+            <li><a href="#" id="twoPlayers">2 players</a></li>
+            <li><a href="#" id="threePlayers">3 players</a></li>
+            <li><a href="#" id="fourPlayers">4 players</a></li>
+        </ul>
+    </div>
+</section>
+
+
+
+<section id="fourthPageNewGame" class="hide">
+    <div>
+    <h3>name yourselves</h3>
+    <form class="amountPlayers">
+
+    </form>
+    <a href="#" id="sendPlayers">Next</a>
+    </div>
+</section>
+
+
+
+<section id="fifthPageNewGame" class="hide">
+    <div>
+    <h3>choose your starter deck</h3>
+    <ul>
+        <li><a href="#" id="firstGame">first game</a></li>
+        <li><a href="#" id="bigMoney">big money</a></li>
+        <li><a href="#" id="interaction">interaction</a></li>
+        <li><a href="#" id="villageSquare">village square</a></li>
+        <li><a href="#" id="sizeDistortion">size distortion</a></li>
+        <li><a href="#" id="makeOwnDeck">- make your own deck -</a></li>
+    </ul>
+
+    </div>
+
+</section>
+
+<section id="buildOwnDeckPage" class="hide">
+    <div>
+    <h3>-choose 10 cards to put in your deck-</h3>
+
+    <form>
+        <ul>
+            <li><input type='checkbox' name="buildDeck" id='adventurer' class="hide">
+                <label for='adventurer'>adventurer</label></li>
+            <li><input type='checkbox'  name="buildDeck" id='bureaucrat' class="hide">
+                <label for='bureaucrat'>bureaucrat</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='cellar' class="hide">
+                <label for='cellar'>cellar</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='chancellor' class="hide">
+                <label for='chancellor'>chancellor</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='chapel' class="hide">
+                <label for='chapel'>chapel</label></li>
+
+
+        </ul>
+        <ul>
+            <li><input type='checkbox' name="buildDeck"  id='councilRoom' class="hide">
+                <label for='councilRoom'>council room</label></li>
+
+            <li><input type='checkbox' name="buildDeck"  id='feast' class="hide">
+                <label for='feast'>feast</label></li>
+
+            <li><input type='checkbox' name="buildDeck" id='festival' class="hide">
+                <label for='festival'>festival</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='gardens' class="hide">
+                <label for='gardens'>gardens</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='labratory' class="hide">
+                <label for='labratory'>labratory</label></li>
+        </ul>
+        <ul>
+            <li><input type='checkbox' name="buildDeck"  id='library' class="hide">
+                <label for='library'>library</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='market' class="hide">
+                <label for='market'>market</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='militia' class="hide">
+                <label for='militia'>militia</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='mine' class="hide">
+                <label for='mine'>mine</label></li>
+            <li><input type='checkbox' name="buildDeck" id='moat' class="hide">
+                <label for='moat'>moat</label></li>
+        </ul>
+        <ul>
+            <li><input type='checkbox' name="buildDeck"  id='moneylender' class="hide">
+                <label for='moneylender'>moneylender</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='remodel' class="hide">
+                <label for='remodel'>remodel</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='smithy' class="hide">
+                <label for='smithy'>smithy</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='spy' class="hide">
+                <label for='spy'>spy</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='thief' class="hide">
+                <label for='thief'>thief</label></li>
+
+        </ul>
+        <ul>
+            <li><input type='checkbox' name="buildDeck"  id='throneRoom' class="hide">
+                <label for='throneRoom'>throneRoom</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='village' class="hide">
+                <label for='village'>village</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='witch' class="hide">
+                <label for='witch'>witch</label></li>
+            <li><input type='checkbox' name="buildDeck" id='woodcutter' class="hide">
+                <label for='woodcutter'>woodcutter</label></li>
+            <li><input type='checkbox' name="buildDeck"  id='workshop' class="hide">
+                <label for='workshop'>workshop</label></li>
+
+        </ul>
+
+        <!-- <input type="submit" value="next" id="submit_buildDeck">-->
+    </form>
+        <br>
+        <a href="#" id="goBack">go Back</a>
+        <a href="#" id="submitNewDeck">Send Deck</a>
+
+    </div>
+</section>
+
+
+
+<section id="sixtPageNewGame" class="hide">
+    <div>
+        <h2>are you ready?</h2>
+
+        <ul>
+
+            <li><a href="gameVisual.html">- Yes -</a></li>
+
+            <li><a href="#" id="readRules">- read the rules -</a></li>
+            <li><a href="#" id="changeConfig">- change the configuration -</a></li>
+        </ul>
+    </div>
+
+</section>
+
+
+<section id="loadGamePage" class="hide">
+    <div class="foundGame">
+
+    </div>
+    <a href="#" id="goBackSecondPage">go back</a>
+
+
+</section>
+
+
+
+<footer><h4>&copy; Shan Rizvi &  Brecht Dedecker & Stijn Coppens & Zeger Deketelaere</h4></footer>
+
+
+
+<script type="text/javascript" src=assets/js/jquery-2.1.4.js></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
