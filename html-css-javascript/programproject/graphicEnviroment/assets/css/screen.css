@@ -1,0 +1,160 @@
+@font-face {
+    font-family: impact;
+    src: url(../fonts/impactreg.woff);
+}
+/*---------------------*/
+/*    HTML ELEMENTS    */
+/*---------------------*/
+
+
+body {
+    background-image: url("../media/castle-02a.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%,100% ;
+    background-position: 50% 10%;
+    font-size: 2.5rem;
+    color: #ffffff ;
+    font-family: impact, Arial, Cambria  sans-serif;
+    text-transform: capitalize;
+
+}
+header{
+    position:relative;
+    top: 0px;
+    height: 50px;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+section{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    witdh:90%;
+    margin-top: 150px;
+
+}
+footer{
+    position:fixed;
+    bottom:5px;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+
+/*---------------------*/
+/*  REUSABLE CLASSES   */
+/*---------------------*/
+.hide{
+    display: none;
+}
+
+
+
+/*---------------------*/
+/* CONTAINING ELEMENTS */
+/*---------------------*/
+
+#firstPage{
+    margin-top: 300px;
+
+
+}
+#secondPage{
+    margin-top: 250px;
+
+}
+
+/*-----5th Page-----*/
+#fifthPageNewGame ul li a {
+    margin:1%;
+}
+
+
+
+#fifthPageNewGame h3 a:hover {
+    color: #FF6000;
+}
+
+
+
+/*-----buildOwnDeck Page-----*/
+
+#buildOwnDeckPage ul {
+    display: inline-block;
+    margin-left: 25px;
+    text-align: left;
+
+}
+
+#buildOwnDeckPage ul li {
+    display:block;
+    width: 100%;
+
+}
+
+
+input[type="checkbox"]:checked +label{
+
+    color: #FF6000;
+
+}
+input[type="checkbox"],
+input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*------------------------*/
+/* PAGE SPECIFIC ELEMENTS */
+/*------------------------*/
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 4rem;
+
+}
+h3{
+    font-size: 3.5rem;
+}
+
+div ul, form{
+    margin-top: 40px;
+}
+div ul li{
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:active {
+
+    color: #FF6000;
+}
+
+#goBack{
+    margin-right: 50px;
+}
+
+.foundGame{
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+.foundGame h2{
+    font-size: 2.5rem;
+
+}
