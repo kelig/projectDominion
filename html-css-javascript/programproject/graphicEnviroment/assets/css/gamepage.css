@@ -2,6 +2,9 @@ html, body {
     height:100%;
     transform: none;
     width:100%;
+
+
+
 }
 body {
     background-image:url(../media/castle-02a.jpg);
@@ -9,7 +12,19 @@ body {
     background-size:cover;
     margin:0;
     position:fixed;
+    font-size: 2.5rem;
+    color: #ffffff ;
+    font-family: impact, Arial, Cambria  sans-serif;
+    text-transform: capitalize;
+
+
 }
+
+img{
+    max-width:100%;
+    max-height:100%;
+}
+
 #cardWrapper {
     box-sizing:border-box;
     height:100%;
@@ -32,6 +47,14 @@ body {
     top:20px;
     width:calc(100% - 48vw - 70px);
 }
+
+#right-cards .discard .card {
+    height: 10vw;
+    margin-right:10px;
+    width: 6.25vw;
+}
+
+
 #cards-hand {
     left:50%;
     margin-left:-100px;
@@ -41,7 +64,7 @@ body {
 }
 
 .card {
-    background-color:#eee;
+    background-color:#EEEEEE;
     margin-bottom:10px;
 }
 
@@ -49,23 +72,31 @@ body {
     float:left;
     height: 12vw;
     margin-right:10px;
-    width: 12vw;
-    background-image: url("/assets/media/castle-02a.jpg")
+    width: 11.85vw;
+
+
+}
+
+#left-cards .row-1 .card {
 
 }
 
 #right-cards .card {
-    float:right;
+    float: right;
     height: 15vw;
-    margin-left:10px;
-    width: 10vw;
+    margin-left: 10px;
+    width: 9.5vw;
+
+
 }
 #cards-hand .card {
     border:1px solid #000;
     height: 15vw;
     margin-left:10px;
     position:absolute;
-    width: 10vw;
+    width: 9.5vw;
+
+
 }
 #cards-hand .card:nth-child(1) {
     margin-left:-200px;
@@ -97,7 +128,7 @@ body {
 #cards-hand .card:nth-child(5) {
     margin-left:200px;
     margin-top:60px;
-    -ms-transfor: rotate(30deg);
+    -ms-transform: rotate(30deg);
     -webkit-transform: rotate(30deg);
     transform:rotate(30deg);
     z-index:1;
@@ -105,7 +136,7 @@ body {
 
 .row-1,
 .row-2,
-.row-3 {
+.row-3{
     clear:both;
     width:100%;
 }
