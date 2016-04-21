@@ -3,10 +3,11 @@
  */
 
 
-//paginawisseling doormiddel van een switch
+// je vangt het klik event op
+//wat is de waarde van het data atrribuut
+//op basis van de waarde zal je hide of niet toevoegen
 var goToPAge;
-goToPAge=function(e){
-    e.preventDefault();
+goToPAge=function(){
     var getId = $(this).attr('id');
     switch (getId)
     {
@@ -70,6 +71,10 @@ goToPAge=function(e){
 
 };
 
+
+
+
+
 var sendPlayers;
 sendPlayers = function(e){
     e.preventDefault();
@@ -89,17 +94,15 @@ function addplayers(number){
         html += '<input type="text" id="player'+i+'" placeholder="name">';
         html += '</br>';
     }
-    html += '</form>';
 
-    //html +='<input type="submit" value="next" id="sendPlayers">';
     $(".amountPlayers").append(html);
 
 }
 
 // kies het deck waarmee je zal spelen
 var chooseDeck;
-chooseDeck=function(e){
-    e.preventDefault();
+chooseDeck=function(){
+
     var getId = $(this).attr('id');
     switch (getId)
     {
@@ -123,6 +126,7 @@ chooseDeck=function(e){
             $('#buildOwnDeckPage').toggleClass('hide');
 
             break;
+        
 
     }
 
@@ -161,17 +165,15 @@ function searchGame(){
     }
 
 }
-
+// delete de toegevoegde html als je terug gaat
 function deleteFoundGame(){
     $(".noGame").remove();
-
 }
 
 $(document).ready(function(){
 
-    $('a').on('click',goToPAge);
-    $('#fifthPageNewGame').find('a').on('click',chooseDeck);
+    $('button').on('click',goToPAge);
+    $('#fifthPageNewGame').find('button').on('click',chooseDeck);
 
-    //$('input[type="submit"] #sendPlayers').on('click,sendPlayers')
 
 });
