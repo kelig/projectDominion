@@ -49,8 +49,10 @@ goToPAge=function(){
             break;
 
         case "sendPlayers":
-            $("#fourthPageNewGame").toggleClass('hide');
-            $("#fifthPageNewGame").toggleClass('hide');
+        	sendPlayers();
+        	$("#fourthPageNewGame").toggleClass('hide');
+        	$("#fifthPageNewGame").toggleClass('hide');
+
             break;
 
         case "submitNewDeck":
@@ -74,12 +76,29 @@ goToPAge=function(){
 
 
 
-
+// met ajax de spelers verzenden naar de servlet.
 var sendPlayers;
-sendPlayers = function(e){
-    e.preventDefault();
-    $("#fourthPageNewGame").toggleClass('hide');
-    $("#fifthPageNewGame").toggleClass('hide');
+sendPlayers = function(){
+	
+	var request = $.ajax({ cache: false,
+	    url: "/DominionServer/DominionServlet",
+	    data: { operation: 'sendPlayers',
+	    	player1:$('#player1').val(),
+	    	player2:$('#player2').val(),
+	    	player3:$('#player3').val(),
+	    	player4:$('#player4').val(),
+	    	}
+	});
+
+	request.done(function (data) {
+	    alert(JSON.stringify(data));
+	});
+	request.fail(function (jqXHR, textStatus) {
+	    alert('Unfortunatly the server is down. Please reload the page and try again');
+	});
+	
+	
+ 
 };
 
 
@@ -133,7 +152,7 @@ chooseDeck=function(){
 };
 
 
-//check hoeveel kaarten je hebt geselecteerd
+//zorgt ervoor dat er niet meer dan tien karten kan selecteren
 var $allChecked = $("input[type=checkbox]");
 $($allChecked).change(checkMaxNumber);
 
@@ -159,7 +178,6 @@ function searchGame(){
         html2 += '</h2>';
 
 
-        //html +='<input type="submit" value="next" id="sendPlayers">';
         $(".foundGame").append(html2);
 
     }
