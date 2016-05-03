@@ -10,61 +10,58 @@
 <body>
 <div id="gameWrapper">
     <section id="left-cards">
+        <!-- gameVisuals.js - var generateDeck moet hier de kaarten invoegen-->
+
         <div class="row-1">
             <div class="card">
-                <img src="images/Festival2.jpg">
-            </div>
-            <div class="card">
-                <img src="images/Festival2.jpg">
+                <img src="images/Adventurer.jpg">
 
             </div>
             <div class="card">
-                <img src="images/Laboratory2.jpg">
+                <img src="images/Adventurer.jpg">
 
             </div>
             <div class="card">
-                <img src="images/Festival2.jpg">
+
+            </div>
+            <div class="card">
+
+            </div>
+            <div class="card">
 
             </div>
         </div>
         <div class="row-2">
             <div class="card">
-                <img src="images/Festival2.jpg">
             </div>
             <div class="card">
-                <img src="images/Laboratory2.jpg">
 
             </div>
             <div class="card">
-                <img src="images/Festival2.jpg">
 
             </div>
             <div class="card">
-                <img src="images/Laboratory2.jpg">
-
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="card">
-                <img src="images/Festival2.jpg">
 
             </div>
             <div class="card">
-                <img src="images/Laboratory2.jpg">
 
             </div>
         </div>
+
     </section>
 
     <section id="used-unused">
-        <div class="unused">
-            <div class="card">
+            <div class="stackPile">
+                <div class="card">
+                    <img src="images/BackSide.jpg">
+                </div>
             </div>
-        </div>
-        <div class="used">
-            <div class="card">
+            <div class="playedPile">
+                <div class="card">
+                    <img src="images/BackSide.jpg">
+                </div>
             </div>
-        </div>
+
     </section>
 
     <section id="right-cards">
@@ -109,7 +106,45 @@
         </div>
     </section>
 
+    <section id="playerName">
+        <div class="Playername">
+            <p>Stijn</p>
+        </div>
+    </section>
 
+
+    <section id="actionButtons">
+        <div class="row-1">
+
+                <button id="endTurn">End Turn</button>
+
+
+        </div>
+        <div class="row-2">
+
+                <button id="playCoins">Play Your Coins</button>
+
+
+        </div>
+        <div class="row-3">
+            <div class="info">
+                <div class="actions">
+                    <p>Actions:</p>
+                </div>
+                <div class="buys">
+                    <p>Buys:</p>
+
+                </div>
+                <div class="coins">
+                    <p>Coins:</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 <!--
  class toevoegen aan de container rond  deck-hand
@@ -121,24 +156,30 @@
 
     <section class="cards-in-hand" id="cards-hand">
             <div class="card">
+
             </div>
             <div class="card">
+
             </div>
             <div class="card">
+
             </div>
             <div class="card">
+
             </div>
             <div class="card">
+
             </div>
             <div class="card">
+
             </div>
-            <!-- EERSTE KAART IN HAND -->
+            <div class="card">
+
+            </div>
+        <!-- EERSTE KAART IN HAND -->
+
             <div class="card">
                 <img src="images/Adventurer.jpg">
-
-            </div>
-            <div class="card">
-
             </div>
             <!-- TWEEDE KAART IN HAND -->
 
@@ -146,56 +187,46 @@
                 <img src="images/Chapel.jpg">
 
             </div>
-            <div class="card">
-
-            </div>
             <!-- DERDE KAART IN HAND -->
 
             <div class="card">
-                <img src="images/Bureaucrat.jpg">
-
-            </div>
-            <div class="card">
-
+                <img src="images/Gold.jpg">
             </div>
             <!-- VIERDE KAART IN HAND -->
 
             <div class="card">
-                <img src="images/Copper.jpg">
-
-            </div>
-            <div class="card">
-
-            </div>
+                <img src="images/Bureaucrat.jpg">
             <!-- VIJFDE KAART IN HAND -->
-
-            <div class="card">
-                <img src="images/Gold.jpg">
-
-
             </div>
             <div class="card">
+                <img src="images/Copper.jpg">
+            </div>
 
+            <div class="card">
             </div>
             <div class="card">
+            </div>
 
+            <div class="card">
             </div>
             <div class="card">
-
             </div>
             <div class="card">
-
             </div>
             <div class="card">
-
             </div>
-
-
-
-
-
+            <div class="card">
+            </div>
+            <div class="card">
+            </div>
         </section>
 
+    <div id="cardBoxedAr" class="hide">
+        <div id="showCard"></div>
+    </div>
 </div>
+
+<script type="text/javascript" src=assets/js/jquery-2.1.4.js></script>
+<script type="text/javascript" src="assets/js/gameVisuals.js"></script>
 </body>
 </html>
