@@ -2,22 +2,31 @@
     font-family: impact;
     src: url(../fonts/impactreg.woff);
 }
+
+@font-face {
+    font-family: halo;
+    src: url(../fonts/Halo3.ttf);
+}
 /*---------------------*/
 /*    HTML ELEMENTS    */
 /*---------------------*/
 
 
 body {
-    background-image: url("../media/castle-02a.jpg");
+    /*background-image: url("../media/castle-02a.jpg")*/
+    background-image: url("../media/kingsLanding.jpg");
+
     background-repeat: no-repeat;
     background-size: 100%,100% ;
     background-position: 50% 10%;
     font-size: 2.5rem;
     color: #ffffff ;
-    font-family: impact, Arial, Cambria  sans-serif;
+    font-family: halo, halo, halo  sans-serif;
     text-transform: capitalize;
 
 }
+
+
 header{
     position:relative;
     top: 0px;
@@ -47,20 +56,26 @@ footer{
 
 }
 
-button{
-    color: orange;
-    background-color: gray;
+button {
+    font-family: halo, halo, halo  sans-serif;
+    color: #FFFFFF;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: none;
     text-align: center;
     text-decoration: none;
-    border-radius: 5%;
-
+    font-size:2vw;
 
 }
+button:hover {
+    color: #FF6000;
+}
+
 
 
 /*---------------------*/
@@ -70,6 +85,9 @@ button{
     display: none;
 }
 
+input[type='checkbox'] {
+    visibility: hidden;
+}
 
 
 /*---------------------*/
@@ -77,8 +95,8 @@ button{
 /*---------------------*/
 
 #firstPage{
-     margin-top: 300px;
- }
+    margin-top: 300px;
+}
 
 
 #secondPage{
@@ -98,6 +116,10 @@ button{
 }
 
 
+
+#sixtPageNewGame ul li {
+    margin:50px;
+}
 
 /*-----buildOwnDeck Page-----*/
 
