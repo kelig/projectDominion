@@ -1,3 +1,14 @@
+@font-face {
+    font-family: impact;
+    src: url(../fonts/impactreg.woff);
+}
+
+@font-face {
+    font-family: halo;
+    src: url(../fonts/Halo3.ttf);
+}
+
+
 html, body {
     height:100%;
     transform: none;
@@ -7,16 +18,20 @@ html, body {
 
 }
 body {
-    background-image:url(../media/castle-02a.jpg);
+    /*background-image: url("../media/castle-02a.jpg")*/
+    background-image: url("../media/kingsLanding.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    margin:0;
     position:fixed;
-    font-size: 2.5rem;
+        font-size: 2vw;
     color: #ffffff ;
-    font-family: impact, Arial, Cambria  sans-serif;
+    font-family: halo, halo, halo  sans-serif;
     text-transform: capitalize;
 
+}
+
+div:empty {
+    display: none
 
 }
 
@@ -34,12 +49,73 @@ img{
     position:relative;
     width:100%;
 }
+
+#playerName{
+    height:100%;
+    left:55%;
+    top:5%;
+    position:absolute;
+    font-size:5vw;
+
+}
+
+#actionButtons{
+    height:100%;
+    left:55%;
+    top:25%;
+    position:absolute;
+
+}
+
+
+#actionButtons .row-1{
+}
+
+#actionButtons .row-2{
+
+}
+
+#actionButtons .row-3{
+    margin:5px;
+
+}
+
+button {
+    font-family: halo, halo, halo  sans-serif;
+    color: #FFFFFF;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size:2vw;
+
+}
+
+button:hover {
+    color: #FF6000;
+}
+
+#used-unused {
+    height:100%;
+    left:20px;
+    position:absolute;
+    top:50%;
+    width:calc(100% - 48vw - 70px);
+}
+
+
 #left-cards {
     height:100%;
     left:20px;
     position:absolute;
     top:20px;
-    width:calc(48vw + 40px);
+    width:calc(100% - 48vw - 70px);
 }
 #right-cards {
     height:100%;
@@ -54,6 +130,7 @@ img{
     margin-right:10px;
     width: 6.25vw;
 }
+
 
 
 #cards-hand {
@@ -71,46 +148,59 @@ img{
     margin-bottom:10px;
 }
 
+#used-unused .card {
+    float:left;
+    height: 12vw;
+    margin-right:10px;
+    width: 7.6vw;
+
+}
+
 #left-cards .card {
     float:left;
     height: 12vw;
     margin-right:10px;
-    width: 11.85vw;
-
-
-}
-
-#left-cards .row-1 .card {
+    width: 7.6vw;
 
 }
+
+
 
 #right-cards .card {
     float: right;
-    height: 15vw;
+    height: 12vw;
     margin-left: 10px;
-    width: 9.5vw;
+    width: 7.6vw;
 
 
 }
+
+
+/*----- Cards in Hand -----*/
+
+
 #cards-hand .card {
-    height: 15vw;
+    height: 12vw;
     margin-left:10px;
     position:absolute;
-    width: 9.5vw;
+    width: 7.6vw;
 
 
 }
 #cards-hand .card img{
-    position:absolute;
 
 }
 
-#cards-hand .card img:hover{
-    z-index:100;
-/*
-    transform: scale(1.5, 1.5);
-*/
-
+#cards-hand .card:hover{
+    z-index: 1;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
 }
 
 #cards-hand .card:nth-child(1) {
@@ -119,7 +209,6 @@ img{
     -ms-transform: rotate(-67.5deg);
     -webkit-transform: rotate(-67.5deg);
     transform:rotate(-67.5deg);
-    z-index:1;
 }
 #cards-hand .card:nth-child(2) {
     margin-left:-275px;
@@ -127,7 +216,6 @@ img{
     -ms-transform: rotate(-60deg);
     -webkit-transform: rotate(-60deg);
     transform:rotate(-60deg);
-    z-index:2;
 }
 #cards-hand .card:nth-child(3) {
     margin-left:-250px;
@@ -135,7 +223,6 @@ img{
     -ms-transform: rotate(-52.5deg);
     -webkit-transform: rotate(-52.5deg);
     transform:rotate(-52.5deg);
-    z-index:3;
 }
 #cards-hand .card:nth-child(4) {
     margin-left:-220px;
@@ -143,7 +230,6 @@ img{
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     transform:rotate(-45deg);
-    z-index:4;
 }
 #cards-hand .card:nth-child(5) {
      margin-left:-180px;
@@ -151,7 +237,6 @@ img{
      -ms-transform: rotate(-37.5deg);
      -webkit-transform: rotate(-37.5deg);
      transform:rotate(-37.5deg);
-     z-index:5;
  }
 #cards-hand .card:nth-child(6) {
     margin-left:-150px;
@@ -159,7 +244,6 @@ img{
     -ms-transform: rotate(-30deg);
     -webkit-transform: rotate(-30deg);
     transform:rotate(-30deg);
-    z-index:6;
 }
 #cards-hand .card:nth-child(7) {
     margin-left:-110px;
@@ -167,7 +251,6 @@ img{
     -ms-transform: rotate(-22.5deg);
     -webkit-transform: rotate(-22.5deg);
     transform:rotate(-22.5deg);
-    z-index:7;
 }
 #cards-hand .card:nth-child(8) {
     margin-left:-75px;
@@ -175,7 +258,6 @@ img{
     -ms-transform: rotate(-15deg);
     -webkit-transform: rotate(-15deg);
     transform:rotate(-15deg);
-    z-index:8;
 }
 #cards-hand .card:nth-child(9) {
     margin-left:-40px;
@@ -183,7 +265,6 @@ img{
     -ms-transform: rotate(-7.5deg);
     -webkit-transform: rotate(-7.5deg);
     transform:rotate(-7.5deg);
-    z-index:9;
 }
 #cards-hand .card:nth-child(10) {
     margin-left:-5px;
@@ -191,7 +272,6 @@ img{
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform:rotate(0deg);
-    z-index:10;
 }
 #cards-hand .card:nth-child(11) {
     margin-left:25px;
@@ -199,7 +279,6 @@ img{
     -ms-transform: rotate(7.5deg);
     -webkit-transform: rotate(7.5deg);
     transform:rotate(7.5deg);
-    z-index:11;
 }
 #cards-hand .card:nth-child(12) {
     margin-left:75px;
@@ -207,7 +286,6 @@ img{
     -ms-transform: rotate(15deg);
     -webkit-transform: rotate(15deg);
     transform:rotate(15deg);
-    z-index:12;
 }
 #cards-hand .card:nth-child(13) {
     margin-left:110px;
@@ -215,7 +293,6 @@ img{
     -ms-transform: rotate(22.5deg);
     -webkit-transform: rotate(22.5deg);
     transform:rotate(22.5deg);
-    z-index:13;
 }
 #cards-hand .card:nth-child(14) {
     margin-left:150px;
@@ -223,7 +300,6 @@ img{
     -ms-transform: rotate(30deg);
     -webkit-transform: rotate(30deg);
     transform:rotate(30deg);
-    z-index:14;
 }
 #cards-hand .card:nth-child(15) {
     margin-left:180px;
@@ -231,7 +307,6 @@ img{
     -ms-transform: rotate(37.5deg);
     -webkit-transform: rotate(37.5deg);
     transform:rotate(37.5deg);
-    z-index:15;
 }
 #cards-hand .card:nth-child(16) {
     margin-left:200px;
@@ -239,7 +314,6 @@ img{
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform:rotate(45deg);
-    z-index:16;
 }
 #cards-hand .card:nth-child(17) {
     margin-left:220px;
@@ -247,7 +321,6 @@ img{
     -ms-transform: rotate(52.5deg);
     -webkit-transform: rotate(52.5deg);
     transform:rotate(52.5deg);
-    z-index:17;
 }
 #cards-hand .card:nth-child(18) {
     margin-left:245px;
@@ -255,7 +328,6 @@ img{
     -ms-transform: rotate(60deg);
     -webkit-transform: rotate(60deg);
     transform:rotate(60deg);
-    z-index:18;
 }
 #cards-hand .card:nth-child(19) {
     margin-left:260px;
@@ -263,7 +335,6 @@ img{
     -ms-transform: rotate(67.5deg);
     -webkit-transform: rotate(67.5deg);
     transform:rotate(67.5deg);
-    z-index:19;
 }
 #cards-hand .card:nth-child(20) {
     margin-left:275px;
@@ -271,7 +342,18 @@ img{
     -ms-transform: rotate(75deg);
     -webkit-transform: rotate(75deg);
     transform:rotate(75deg);
-    z-index:20;
+}
+
+
+
+
+#showCard{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 5%;
+    z-index:1;
 }
 
 
