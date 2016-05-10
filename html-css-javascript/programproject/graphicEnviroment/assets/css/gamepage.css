@@ -194,9 +194,8 @@ button:hover {
 
 /*----- Hover over een kaart in de hand, kaart komt bovenaan in het rijtje -----*/
 #cards-hand .card:hover{
-    position:absolute;
-    display:inline-block;
-    z-index:999;
+
+    z-index:1;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
@@ -208,7 +207,7 @@ button:hover {
 }
 
 #cards-hand .card:nth-child(19) {
-    z-index: 3;
+    z-index:-7;
 
     margin-left:-300px;
     margin-top:115px;
@@ -217,7 +216,7 @@ button:hover {
     transform:rotate(-67.5deg);
 }
 #cards-hand .card:nth-child(16) {
-    z-index: 4;
+    z-index:-6;
 
     margin-left:-275px;
     margin-top:65px;
@@ -226,7 +225,7 @@ button:hover {
     transform:rotate(-60deg);
 }
 #cards-hand .card:nth-child(15) {
-    z-index: 5;
+    z-index:-5;
 
     margin-left:-250px;
     margin-top:25px;
@@ -235,7 +234,7 @@ button:hover {
     transform:rotate(-52.5deg);
 }
 #cards-hand .card:nth-child(12) {
-    z-index: 6;
+    z-index:-4;
 
     margin-left:-220px;
     margin-top:-10px;
@@ -244,7 +243,7 @@ button:hover {
     transform:rotate(-45deg);
 }
 #cards-hand .card:nth-child(11) {
-    z-index: 7;
+    z-index:-3;
 
     margin-left:-180px;
      margin-top:-30px;
@@ -253,7 +252,7 @@ button:hover {
      transform:rotate(-37.5deg);
  }
 #cards-hand .card:nth-child(8) {
-    z-index: 8;
+    z-index:-2;
 
     margin-left:-150px;
     margin-top:-45px;
@@ -262,8 +261,7 @@ button:hover {
     transform:rotate(-30deg);
 }
 #cards-hand .card:nth-child(7) {
-    z-index: 9;
-
+    z-index:-1;
     margin-left:-110px;
     margin-top:-60px;
     -ms-transform: rotate(-22.5deg);
@@ -271,7 +269,6 @@ button:hover {
     transform:rotate(-22.5deg);
 }
 #cards-hand .card:nth-child(1) {
-    z-index: 10;
 
     margin-left:-75px;
     margin-top:-60px;
@@ -280,7 +277,6 @@ button:hover {
     transform:rotate(-15deg);
 }
 #cards-hand .card:nth-child(2) {
-    z-index: 11;
 
     margin-left:-40px;
     margin-top:-70px;
@@ -289,7 +285,6 @@ button:hover {
     transform:rotate(-7.5deg);
 }
 #cards-hand .card:nth-child(3) {
-    z-index: 12;
 
     margin-left:-5px;
     margin-top:-70px;
@@ -298,7 +293,6 @@ button:hover {
     transform:rotate(0deg);
 }
 #cards-hand .card:nth-child(4) {
-    z-index: 13;
 
     margin-left:25px;
     margin-top:-70px;
@@ -307,7 +301,6 @@ button:hover {
     transform:rotate(7.5deg);
 }
 #cards-hand .card:nth-child(5) {
-    z-index: 14;
 
     margin-left:75px;
     margin-top:-55px;
@@ -316,7 +309,6 @@ button:hover {
     transform:rotate(15deg);
 }
 #cards-hand .card:nth-child(6) {
-    z-index: 15;
 
     margin-left:110px;
     margin-top:-40px;
@@ -325,7 +317,6 @@ button:hover {
     transform:rotate(22.5deg);
 }
 #cards-hand .card:nth-child(9) {
-    z-index: 16;
 
     margin-left:150px;
     margin-top:-25px;
@@ -334,7 +325,6 @@ button:hover {
     transform:rotate(30deg);
 }
 #cards-hand .card:nth-child(10) {
-    z-index: 17;
 
     margin-left:180px;
     margin-top:-5px;
@@ -343,7 +333,6 @@ button:hover {
     transform:rotate(37.5deg);
 }
 #cards-hand .card:nth-child(13) {
-    z-index: 18;
 
     margin-left:200px;
     margin-top:20px;
@@ -352,7 +341,6 @@ button:hover {
     transform:rotate(45deg);
 }
 #cards-hand .card:nth-child(14) {
-    z-index: 19;
 
     margin-left:220px;
     margin-top:45px;
@@ -361,7 +349,6 @@ button:hover {
     transform:rotate(52.5deg);
 }
 #cards-hand .card:nth-child(17) {
-    z-index: 20;
 
     margin-left:245px;
     margin-top:75px;
@@ -370,7 +357,6 @@ button:hover {
     transform:rotate(60deg);
 }
 #cards-hand .card:nth-child(18) {
-    z-index: 21;
 
     margin-left:260px;
     margin-top:115px;
@@ -379,7 +365,6 @@ button:hover {
     transform:rotate(67.5deg);
 }
 #cards-hand .card:nth-child(20) {
-    z-index: 22;
 
     margin-left:275px;
     margin-top:150px;
