@@ -9,44 +9,11 @@
 </head>
 <body>
 <div id="gameWrapper">
+
     <section id="left-cards">
         <!-- gameVisuals.js - var generateDeck moet hier de kaarten invoegen-->
 
-        <div class="row-1">
-            <div class="card">
-                <img src="images/Adventurer.jpg">
 
-            </div>
-            <div class="card">
-                <img src="images/Adventurer.jpg">
-
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="card">
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>
-        </div>
 
     </section>
 
@@ -64,67 +31,29 @@
 
     </section>
 
+    <!-- Coins en Eigendomkaarten, ook Curse  START-->
     <section id="right-cards">
-        <div class="row-1">
-            <div class="card">
-                <img src="images/Copper.jpg">
-            </div>
-            <div class="card">
-                <img src="images/Estate.jpg">
 
-            </div>
-            <div class="card">
-                <img src="images/Curse.jpg">
-
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="card">
-                <img src="images/Silver.jpg">
-
-            </div>
-            <div class="card">
-                <img src="images/Duchy.jpg">
-
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="card">
-                <img src="images/Gold.jpg">
-
-            </div>
-            <div class="card">
-                <img src="images/Province.jpg">
-
-            </div>
-        </div>
-        <div class="discard">
-            <div class="card">
-                <img src="images/Discard.jpg">
-            </div>
-
-        </div>
     </section>
+    <!-- Coins en Eigendomkaarten, ook Curse  /END-->
 
+
+    <!-- Huidige Speler  START-->
     <section id="playerName">
         <div class="Playername">
             <p>Stijn</p>
         </div>
     </section>
+    <!-- Huidige Speler  /END-->
 
 
+    <!-- Actieknoppen en Overzicht van mogelijke zetten  START-->
     <section id="actionButtons">
         <div class="row-1">
-
                 <button id="endTurn">End Turn</button>
-
-
         </div>
         <div class="row-2">
-
                 <button id="playCoins">Play Your Coins</button>
-
-
         </div>
         <div class="row-3">
             <div class="info">
@@ -133,97 +62,37 @@
                 </div>
                 <div class="buys">
                     <p>Buys:</p>
-
                 </div>
                 <div class="coins">
                     <p>Coins:</p>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
+    <!-- Actieknoppen en Overzicht van mogelijke zetten  /END-->
 
-<!--
- class toevoegen aan de container rond  deck-hand
- op basis daarvan aparte CSS-regels toevoegen.
- bv: dit was voor class .five-cards .card:nth-child(1)...
 
- -->
-    <!-- FILL UNEVEN SPOTS FIRST!! -->
+
+    <!-- Kaarten in je hand  START-->
 
     <section class="cards-in-hand" id="cards-hand">
-            <div class="card">
 
-            </div>
-            <div class="card">
+    </section>
+    <!-- Kaarten in je hand  /END-->
 
-            </div>
-            <div class="card">
 
-            </div>
-            <div class="card">
+    <!-- overlay rond kaart die in het midden staat START-->
+    <div id="overlay" class="hide">
 
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>
-            <div class="card">
-
-            </div>
-        <!-- EERSTE KAART IN HAND -->
-
-            <div class="card">
-                <img src="images/Adventurer.jpg">
-            </div>
-            <!-- TWEEDE KAART IN HAND -->
-
-            <div class="card">
-                <img src="images/Chapel.jpg">
-
-            </div>
-            <!-- DERDE KAART IN HAND -->
-
-            <div class="card">
-                <img src="images/Gold.jpg">
-            </div>
-            <!-- VIERDE KAART IN HAND -->
-
-            <div class="card">
-                <img src="images/Bureaucrat.jpg">
-            <!-- VIJFDE KAART IN HAND -->
-            </div>
-            <div class="card">
-                <img src="images/Copper.jpg">
-            </div>
-
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-        </section>
-
-    <div id="cardBoxedAr" class="hide">
-        <div id="showCard"></div>
     </div>
+    <div id="cardBoxedAr" class="hide">
+        <div id="showCard">
+
+        </div>
+    </div>
+    <!-- overlay rond kaart die in het midden staat /END-->
+
+
 </div>
 
 <script type="text/javascript" src=assets/js/jquery-2.1.4.js></script>
