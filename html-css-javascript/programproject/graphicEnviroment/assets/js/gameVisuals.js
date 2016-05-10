@@ -2,6 +2,20 @@
  * Created by Zeger on 04/04/2016.
  */
 
+
+var divGameView;
+$('#divGame').show();
+var coins = 0;
+var buys = 1;
+var actions = 1;
+
+var actionButtons = function(){
+    document.getElementById('actions').innerHTML=coins;
+    document.getElementById('buys').innerHTML=buys;
+    document.getElementById('coins').innerHTML=actions;
+
+};
+
 //Gekozen kaarten komen hier
 var Deck = ["Cellar","Market","Militia","Mine","Moat","Remodel","Smithy","Village","Woodcutter","Workshop"];
 var Coins = ["Estate","Copper","Duchy","Silver","Province","Gold","Curse"];
@@ -86,6 +100,8 @@ var hideBigCard = function(){
 
 
 
+
+
 $(document).ready(function(){
     console.log("Ok!");
     generateDeck();
@@ -94,6 +110,9 @@ $(document).ready(function(){
     $('#left-cards img').on('click',showBigCard);
     $('#cardBoxedAr').on('click', hideBigCard);
     $('#overlay').on('click', hideBigCard);
-
+    actionButtons();
 
 });
+//Disable f5 & f6 key
+$(document).on("keydown", function (e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); });
+$(document).on("keydown", function (e) { if ((e.which || e.keyCode) == 117) e.preventDefault(); });
