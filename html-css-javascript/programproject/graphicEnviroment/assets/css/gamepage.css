@@ -65,6 +65,13 @@ img{
 
 }
 
+#actionButtons section{
+    display:inline-block;
+}
+
+#actionButtons p{
+    display:inline-block;
+}
 
 #actionButtons .row-1{
 }
