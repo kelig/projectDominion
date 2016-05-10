@@ -130,7 +130,7 @@ button:hover {
     width:calc(70% - 48vw - 70px);
 }
 
-#right-cards .discard .card {
+#right-cards .card {
     height: 10vw;
     margin-right:10px;
     width: 6.25vw;
