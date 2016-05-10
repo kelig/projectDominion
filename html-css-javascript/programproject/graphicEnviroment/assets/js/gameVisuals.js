@@ -10,15 +10,15 @@ var buys = 1;
 var actions = 1;
 
 var actionButtons = function(){
-    document.getElementById('actions').innerHTML=coins;
+    document.getElementById('coins').innerHTML=coins;
     document.getElementById('buys').innerHTML=buys;
-    document.getElementById('coins').innerHTML=actions;
+    document.getElementById('actions').innerHTML=actions;
 
 };
 
 //Gekozen kaarten komen hier
 var Deck = ["Cellar","Market","Militia","Mine","Moat","Remodel","Smithy","Village","Woodcutter","Workshop"];
-var Coins = ["Estate","Copper","Duchy","Silver","Province","Gold","Curse"];
+var Coins = ["Curse","Estate","Copper","Duchy","Silver","Province","Gold"];
 var Hand = ["Estate","Estate","Copper","Copper","Copper"];
 
 
