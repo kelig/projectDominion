@@ -29,10 +29,8 @@ body {
     text-transform: capitalize;
 
 }
-
-div:empty {
-    display: none
-
+.hide {
+    display:none;
 }
 
 
@@ -105,7 +103,7 @@ button:hover {
     height:100%;
     left:20px;
     position:absolute;
-    top:50%;
+    top:60%;
     width:calc(100% - 48vw - 70px);
 }
 
@@ -122,7 +120,7 @@ button:hover {
     right:20px;
     position:absolute;
     top:20px;
-    width:calc(100% - 48vw - 70px);
+    width:calc(70% - 48vw - 70px);
 }
 
 #right-cards .discard .card {
@@ -146,6 +144,8 @@ button:hover {
     background-color:#EEEEEE;
     */
     margin-bottom:10px;
+    position:relative;
+
 }
 
 #used-unused .card {
@@ -168,9 +168,9 @@ button:hover {
 
 #right-cards .card {
     float: right;
-    height: 12vw;
+    height: 10vw;
     margin-left: 10px;
-    width: 7.6vw;
+    width: 6.3vw;
 
 
 }
@@ -189,10 +189,14 @@ button:hover {
 }
 #cards-hand .card img{
 
+    position:absolute;
 }
 
+/*----- Hover over een kaart in de hand, kaart komt bovenaan in het rijtje -----*/
 #cards-hand .card:hover{
-    z-index: 1;
+    position:absolute;
+    display:inline-block;
+    z-index:999;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
@@ -203,42 +207,54 @@ button:hover {
     transform: scale(1.5);
 }
 
-#cards-hand .card:nth-child(1) {
+#cards-hand .card:nth-child(19) {
+    z-index: 3;
+
     margin-left:-300px;
     margin-top:115px;
     -ms-transform: rotate(-67.5deg);
     -webkit-transform: rotate(-67.5deg);
     transform:rotate(-67.5deg);
 }
-#cards-hand .card:nth-child(2) {
+#cards-hand .card:nth-child(16) {
+    z-index: 4;
+
     margin-left:-275px;
     margin-top:65px;
     -ms-transform: rotate(-60deg);
     -webkit-transform: rotate(-60deg);
     transform:rotate(-60deg);
 }
-#cards-hand .card:nth-child(3) {
+#cards-hand .card:nth-child(15) {
+    z-index: 5;
+
     margin-left:-250px;
     margin-top:25px;
     -ms-transform: rotate(-52.5deg);
     -webkit-transform: rotate(-52.5deg);
     transform:rotate(-52.5deg);
 }
-#cards-hand .card:nth-child(4) {
+#cards-hand .card:nth-child(12) {
+    z-index: 6;
+
     margin-left:-220px;
     margin-top:-10px;
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     transform:rotate(-45deg);
 }
-#cards-hand .card:nth-child(5) {
-     margin-left:-180px;
+#cards-hand .card:nth-child(11) {
+    z-index: 7;
+
+    margin-left:-180px;
      margin-top:-30px;
      -ms-transform: rotate(-37.5deg);
      -webkit-transform: rotate(-37.5deg);
      transform:rotate(-37.5deg);
  }
-#cards-hand .card:nth-child(6) {
+#cards-hand .card:nth-child(8) {
+    z-index: 8;
+
     margin-left:-150px;
     margin-top:-45px;
     -ms-transform: rotate(-30deg);
@@ -246,90 +262,116 @@ button:hover {
     transform:rotate(-30deg);
 }
 #cards-hand .card:nth-child(7) {
+    z-index: 9;
+
     margin-left:-110px;
     margin-top:-60px;
     -ms-transform: rotate(-22.5deg);
     -webkit-transform: rotate(-22.5deg);
     transform:rotate(-22.5deg);
 }
-#cards-hand .card:nth-child(8) {
+#cards-hand .card:nth-child(1) {
+    z-index: 10;
+
     margin-left:-75px;
     margin-top:-60px;
     -ms-transform: rotate(-15deg);
     -webkit-transform: rotate(-15deg);
     transform:rotate(-15deg);
 }
-#cards-hand .card:nth-child(9) {
+#cards-hand .card:nth-child(2) {
+    z-index: 11;
+
     margin-left:-40px;
     margin-top:-70px;
     -ms-transform: rotate(-7.5deg);
     -webkit-transform: rotate(-7.5deg);
     transform:rotate(-7.5deg);
 }
-#cards-hand .card:nth-child(10) {
+#cards-hand .card:nth-child(3) {
+    z-index: 12;
+
     margin-left:-5px;
     margin-top:-70px;
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform:rotate(0deg);
 }
-#cards-hand .card:nth-child(11) {
+#cards-hand .card:nth-child(4) {
+    z-index: 13;
+
     margin-left:25px;
     margin-top:-70px;
     -ms-transform: rotate(7.5deg);
     -webkit-transform: rotate(7.5deg);
     transform:rotate(7.5deg);
 }
-#cards-hand .card:nth-child(12) {
+#cards-hand .card:nth-child(5) {
+    z-index: 14;
+
     margin-left:75px;
     margin-top:-55px;
     -ms-transform: rotate(15deg);
     -webkit-transform: rotate(15deg);
     transform:rotate(15deg);
 }
-#cards-hand .card:nth-child(13) {
+#cards-hand .card:nth-child(6) {
+    z-index: 15;
+
     margin-left:110px;
     margin-top:-40px;
     -ms-transform: rotate(22.5deg);
     -webkit-transform: rotate(22.5deg);
     transform:rotate(22.5deg);
 }
-#cards-hand .card:nth-child(14) {
+#cards-hand .card:nth-child(9) {
+    z-index: 16;
+
     margin-left:150px;
     margin-top:-25px;
     -ms-transform: rotate(30deg);
     -webkit-transform: rotate(30deg);
     transform:rotate(30deg);
 }
-#cards-hand .card:nth-child(15) {
+#cards-hand .card:nth-child(10) {
+    z-index: 17;
+
     margin-left:180px;
     margin-top:-5px;
     -ms-transform: rotate(37.5deg);
     -webkit-transform: rotate(37.5deg);
     transform:rotate(37.5deg);
 }
-#cards-hand .card:nth-child(16) {
+#cards-hand .card:nth-child(13) {
+    z-index: 18;
+
     margin-left:200px;
     margin-top:20px;
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform:rotate(45deg);
 }
-#cards-hand .card:nth-child(17) {
+#cards-hand .card:nth-child(14) {
+    z-index: 19;
+
     margin-left:220px;
     margin-top:45px;
     -ms-transform: rotate(52.5deg);
     -webkit-transform: rotate(52.5deg);
     transform:rotate(52.5deg);
 }
-#cards-hand .card:nth-child(18) {
+#cards-hand .card:nth-child(17) {
+    z-index: 20;
+
     margin-left:245px;
     margin-top:75px;
     -ms-transform: rotate(60deg);
     -webkit-transform: rotate(60deg);
     transform:rotate(60deg);
 }
-#cards-hand .card:nth-child(19) {
+#cards-hand .card:nth-child(18) {
+    z-index: 21;
+
     margin-left:260px;
     margin-top:115px;
     -ms-transform: rotate(67.5deg);
@@ -337,6 +379,8 @@ button:hover {
     transform:rotate(67.5deg);
 }
 #cards-hand .card:nth-child(20) {
+    z-index: 22;
+
     margin-left:275px;
     margin-top:150px;
     -ms-transform: rotate(75deg);
@@ -345,17 +389,65 @@ button:hover {
 }
 
 
+.counter{
+    font-family: 'Arial', sans-serif;
+    line-height:25px;
+    text-align:center;
+    font-weight:bold;
+    font-size: 1rem;
+    position: absolute;
+    background-color: #FF6000;
+    width: 25px;
+    height:25px;
+    border-radius:50px;
+    margin-right:2px;
+    margin-top:2px;
+    right:0;
+    top:0;
+    cursor:pointer;
+}
+
+.buy{
+    font-family: 'Arial', sans-serif;
+    line-height:25px;
+    text-align:center;
+    font-weight:bold;
+    font-size: 1rem;
+    position: absolute;
+    background-color: #FF6000;
+    width: 25px;
+    height:25px;
+    border-radius:50px;
+    margin-right:2px;
+    margin-bottom:2px;
+    right:0;
+    bottom:0;
+    cursor:pointer;
+}
+
 
 
 #showCard{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 5%;
-    z-index:1;
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:345px;
+    height:552px;
+    margin-left:-172px;
+    margin-top:-276px;
+    z-index:51;
 }
 
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index:50;
+}
 
 
 
