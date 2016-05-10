@@ -3,7 +3,9 @@
  */
 
 
-
+// je vangt het klik event op
+//wat is de waarde van het data atrribuut
+//op basis van de waarde zal je hide of niet toevoegen
 var goToPAge;
 goToPAge=function(){
     var getId = $(this).attr('id');
@@ -47,14 +49,13 @@ goToPAge=function(){
             break;
 
         case "sendPlayers":
-        	sendPlayers();
-        	$("#fourthPageNewGame").toggleClass('hide');
-        	$("#fifthPageNewGame").toggleClass('hide');
+            sendPlayers();
+            $("#fourthPageNewGame").toggleClass('hide');
+            $("#fifthPageNewGame").toggleClass('hide');
 
             break;
 
         case "submitNewDeck":
-        	
             $("#buildOwnDeckPage").toggleClass('hide');
             $("#sixtPageNewGame").toggleClass('hide');
             break;
@@ -68,6 +69,7 @@ goToPAge=function(){
             location.reload();
             break;
 
+
     }
 
 };
@@ -75,62 +77,39 @@ goToPAge=function(){
 
 
 
+/*
+$('#sendPlayers').click(function(){
+if($.trim($('#player').val()) == ''){
+    alert('Input can not be left blank');
+}
+});
+*/
+
+
 // met ajax de spelers verzenden naar de servlet.
 var sendPlayers;
 sendPlayers = function(){
-	
-	var request = $.ajax({ cache: false,
-	    url: "/DominionServer/DominionServlet",
-	    data: { operation: 'sendPlayers',
-	    	player1:$('#player1').val(),
-	    	player2:$('#player2').val(),
-	    	player3:$('#player3').val(),
-	    	player4:$('#player4').val()
-	    	}
-	});
 
-	request.done(function (data) {
-	    alert(JSON.stringify(data));
-	});
-	request.fail(function (jqXHR, textStatus) {
-	    alert(xhr.status);
-	    alert(throwError)
-	});
-	
-	
- 
+    var request = $.ajax({ cache: false,
+        url: "/DominionServer/DominionServlet",
+        data: { operation: 'sendPlayers',
+            player1:$('#player1').val(),
+            player2:$('#player2').val(),
+            player3:$('#player3').val(),
+            player4:$('#player4').val(),
+        }
+    });
+
+    request.done(function (data) {
+        alert(JSON.stringify(data));
+    });
+    request.fail(function (jqXHR, textStatus) {
+        alert('Unfortunatly the server is down. Please reload the page and try again');
+    });
+
+
+
 };
-
-
-//met ajax deck naar servlet zenden
-
-var SendDeck;
-SendDeck = function(deck){
-	
-	var request = $.ajax({ cache: false,
-	    url: "/DominionServer/DominionServlet",
-	    data: { operation: 'SendDeck',
-	    		deck: deck
-	          }
-	});
-
-	request.done(function (data) {
-	    alert(JSON.stringify(data));
-	});
-	request.fail(function (jqXHR, textStatus) {
-	    alert(xhr.status);
-	    alert(throwError)
-	});
-	
-	
- 
-};
-
-
-
-
-
-
 
 
 //spelers worden automatisch toegevoegd naar wat je hebt gekozen
@@ -141,7 +120,7 @@ function addplayers(number){
         html += '<label for="player'+i+'">';
         html += 'player'+i+'</label>';
         html += '</br>';
-        html += '<input type="text" id="player'+i+'" placeholder="name">';
+        html += '<input type="text" id="player'+i+'" maxlength="20"  placeholder="name" required>';
         html += '</br>';
     }
 
@@ -157,59 +136,42 @@ chooseDeck=function(){
     switch (getId)
     {
         case "firstGame":
-        	SendDeck('First Game');
-        	goToLastPage();
+            alert('firstGame');
             break;
         case "bigMoney":
-        	SendDeck('Big Money');
-        	goToLastPage();
-
+            alert('bigMoney');
             break;
         case "interaction":
-        	SendDeck('Interaction');
-        	goToLastPage();
-
+            alert('interaction');
             break;
         case "villageSquare":
-        	SendDeck('Village Square');
-        	goToLastPage();
-
+            alert('villageSquare');
             break;
         case "sizeDistortion":
-        	SendDeck('Size distortion');
-        	goToLastPage();
-
+            alert('sizeDistortion');
             break;
         case "makeOwnDeck":
-        	SendDeck(getId);
-        	
             $('#fifthPageNewGame').toggleClass('hide');
             $('#buildOwnDeckPage').toggleClass('hide');
 
             break;
-        
+
 
     }
 
 };
-// ga naar de laatste pagina
-
-var goToLastPage;
-goToLastPage = function(){
-    $('#fifthPageNewGame').toggleClass('hide');
-    $('#sixtPageNewGame').toggleClass('hide');
-}
 
 
-
-//zorgt ervoor dat er niet meer dan tien karten kan selecteren
+//zorgt ervoor dat er niet meer dan tien kaarten kan selecteren
 var $allChecked = $("input[type=checkbox]");
 $($allChecked).change(checkMaxNumber);
+
 
 function checkMaxNumber() {
     var $ac = $(this),
         amount = $("input[type=checkbox]:checked").length;
     $("input[type=checkbox]:not(:checked)").prop("disabled", amount >= 10);
+
 
 }
 
@@ -234,14 +196,28 @@ function searchGame(){
 
 }
 // delete de toegevoegde html als je terug gaat
-function deleteNoFoundGame(){
+function deleteFoundGame(){
     $(".noGame").remove();
 }
+
+var zeger = function showMyChoices() {
+        $(":checkbox").change(function(){
+            var checkboxIDs = [];
+            $(":checkbox:checked").each(function(index){
+                checkboxIDs.push($(this).attr('id'));
+            });
+
+            console.log(checkboxIDs);
+
+        });
+
+};
 
 $(document).ready(function(){
 
     $('button').on('click',goToPAge);
     $('#fifthPageNewGame').find('button').on('click',chooseDeck);
 
+    zeger();
 
 });
