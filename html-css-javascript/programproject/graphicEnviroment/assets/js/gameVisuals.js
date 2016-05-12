@@ -58,7 +58,6 @@ var generateCoins = function(){
         //html += '</img>';
         console.log(html);
         $("#right-cards").append(html);
-
     }
 
 };
@@ -101,7 +100,6 @@ var hideBigCard = function(){
 
 
 
-
 $(document).ready(function(){
     console.log("Ok!");
     generateDeck();
@@ -113,6 +111,7 @@ $(document).ready(function(){
     actionButtons();
 
 });
-//Disable f5 & f6 key
+//Disable f5 & f6 key & drag
 $(document).on("keydown", function (e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); });
 $(document).on("keydown", function (e) { if ((e.which || e.keyCode) == 117) e.preventDefault(); });
+$('html').on('dragstart', function(event) { event.preventDefault(); });
