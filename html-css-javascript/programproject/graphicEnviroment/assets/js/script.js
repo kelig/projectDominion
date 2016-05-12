@@ -101,7 +101,7 @@ sendPlayers = function(){
     });
 
     request.done(function (data) {
-        alert(JSON.stringify(data));
+        console.log(data);
     });
     request.fail(function (jqXHR, textStatus) {
         alert('Unfortunatly the server is down. Please reload the page and try again');
@@ -110,6 +110,27 @@ sendPlayers = function(){
 
 
 };
+
+var startGame;
+startGame=function(){
+	var request = $.ajax({ cache: false,
+	    url: "/DominionServer/DominionServlet",
+	    data: { operation: 'startGame',
+	    		deck: deck
+	          }
+	});
+
+	request.done(function (data) {
+		console.log(deck)
+	});
+	request.fail(function (jqXHR, textStatus) {
+	    alert(xhr.status);
+	    alert(throwError)
+	});
+	
+	
+};
+
 
 
 //spelers worden automatisch toegevoegd naar wat je hebt gekozen
@@ -136,26 +157,37 @@ chooseDeck=function(){
     switch (getId)
     {
         case "firstGame":
-            alert('firstGame');
+        	SendDeck('First Game');
+        	goToLastPage();
             break;
         case "bigMoney":
-            alert('bigMoney');
+        	SendDeck('Big Money');
+        	goToLastPage();
+
             break;
         case "interaction":
-            alert('interaction');
+        	SendDeck('Interaction');
+        	goToLastPage();
+
             break;
         case "villageSquare":
-            alert('villageSquare');
+        	SendDeck('Village Square');
+        	goToLastPage();
+
             break;
         case "sizeDistortion":
-            alert('sizeDistortion');
+        	SendDeck('Size distortion');
+        	goToLastPage();
+
             break;
         case "makeOwnDeck":
+        	SendDeck(getId);
+        	
             $('#fifthPageNewGame').toggleClass('hide');
             $('#buildOwnDeckPage').toggleClass('hide');
 
             break;
-
+        
 
     }
 
@@ -195,10 +227,19 @@ function searchGame(){
     }
 
 }
+
+var goToLastPage;
+goToLastPage = function(){
+    $('#fifthPageNewGame').toggleClass('hide');
+    $('#sixtPageNewGame').toggleClass('hide')
+}
+
+
 // delete de toegevoegde html als je terug gaat
 function deleteFoundGame(){
     $(".noGame").remove();
 }
+
 
 var showChoices = function showMyChoices() {
         $(":checkbox").change(function(){
