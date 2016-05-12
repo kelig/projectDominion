@@ -14,18 +14,28 @@
 
 body {
     /*background-image: url("../media/castle-02a.jpg")*/
-    background-image: url("../media/kingsLanding.jpg");
-
+    background: url("../media/kingsLanding.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:relative;
     background-repeat: no-repeat;
-    background-size: 100%,100% ;
-    background-position: 50% 10%;
     font-size: 2.5rem;
-    color: #ffffff ;
+    color: #3E3919 ;
     font-family: halo, halo, halo  sans-serif;
     text-transform: capitalize;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
 
 }
 
+#wrapper{
+    position:absolute;
+    width:100%;
+}
 
 header{
     position:relative;
@@ -58,7 +68,7 @@ footer{
 
 button {
     font-family: halo, halo, halo  sans-serif;
-    color: #FFFFFF;
+    color: #3E3919;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -69,7 +79,7 @@ button {
     padding-bottom: 10px;
     text-align: center;
     text-decoration: none;
-    font-size:2vw;
+    font-size:3rem;
 
 }
 button:hover {
@@ -154,15 +164,15 @@ input[type="checkbox"] + label {
 /*------------------------*/
 
 h1{
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 4.5rem;
 
 }
 h3{
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 form{
@@ -172,7 +182,7 @@ form{
 
 a{
     text-decoration: none;
-    color: #ffffff;
+    color: #6E6C6C;
 }
 
 a:active {
@@ -190,6 +200,6 @@ a:active {
 
 }
 .foundGame h2{
-    font-size: 2.5rem;
+    font-size: 3rem;
 
 }
