@@ -13,10 +13,9 @@ html, body {
     height:100%;
     transform: none;
     width:100%;
-
-
-
+    position:relative;
 }
+
 body {
     /*background-image: url("../media/castle-02a.jpg")*/
     background-image: url("../media/kingsLanding.jpg");
@@ -24,11 +23,15 @@ body {
     background-size:cover;
     position:fixed;
         font-size: 2vw;
-    color: #ffffff ;
+    color: #3E3919 ;
     font-family: halo, halo, halo  sans-serif;
     text-transform: capitalize;
-
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
 }
+
 .hide {
     display:none;
 }
@@ -44,7 +47,7 @@ img{
     height:100%;
     overflow-y:scroll;
     padding:20px;
-    position:relative;
+    position:absolute;
     width:100%;
 }
 
@@ -62,7 +65,6 @@ img{
     left:55%;
     top:25%;
     position:absolute;
-
 }
 
 #actionButtons section{
@@ -87,7 +89,7 @@ img{
 
 button {
     font-family: halo, halo, halo  sans-serif;
-    color: #FFFFFF;
+    color: #3E3919;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -388,6 +390,7 @@ button:hover {
     font-weight:bold;
     font-size: 1rem;
     position: absolute;
+    color: #FFFFFF;
     background-color: #FF6000;
     width: 25px;
     height:25px;
@@ -406,6 +409,7 @@ button:hover {
     font-weight:bold;
     font-size: 1rem;
     position: absolute;
+    color: #FFFFFF;
     background-color: #FF6000;
     width: 25px;
     height:25px;
