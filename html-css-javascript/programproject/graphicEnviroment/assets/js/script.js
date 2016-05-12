@@ -200,7 +200,7 @@ function deleteFoundGame(){
     $(".noGame").remove();
 }
 
-var zeger = function showMyChoices() {
+var showChoices = function showMyChoices() {
         $(":checkbox").change(function(){
             var checkboxIDs = [];
             $(":checkbox:checked").each(function(index){
@@ -213,11 +213,22 @@ var zeger = function showMyChoices() {
 
 };
 
+//Na 7,5 seconden verdwijnt de footer
+setTimeout(function() {
+    $('footer').fadeOut('fast');
+}, 7500); // <-- time in milliseconds
+
+
 $(document).ready(function(){
 
     $('button').on('click',goToPAge);
     $('#fifthPageNewGame').find('button').on('click',chooseDeck);
 
-    zeger();
+    showChoices();
 
 });
+
+//Disable f5 & f6 key & drag
+$(document).on("keydown", function (e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); });
+$(document).on("keydown", function (e) { if ((e.which || e.keyCode) == 117) e.preventDefault(); });
+$('html').on('dragstart', function(event) { event.preventDefault(); });
