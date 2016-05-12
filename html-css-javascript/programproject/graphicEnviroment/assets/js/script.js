@@ -101,7 +101,7 @@ sendPlayers = function(){
     });
 
     request.done(function (data) {
-        alert(JSON.stringify(data));
+        console.log( 'players are now send');
     });
     request.fail(function (jqXHR, textStatus) {
         alert('Unfortunatly the server is down. Please reload the page and try again');
@@ -110,6 +110,49 @@ sendPlayers = function(){
 
 
 };
+
+var SendDeck;
+SendDeck = function(deck){
+	
+	var request = $.ajax({ cache: false,
+	    url: "/DominionServer/DominionServlet",
+	    data: { operation: 'SendDeck',
+	    		deck: deck
+	          }
+	});
+
+	request.done(function (data) {
+		console.log('send deck: '+ deck)
+	});
+	request.fail(function (jqXHR, textStatus) {
+	    alert(xhr.status);
+	    alert(throwError)
+	});
+	
+	
+ 
+};
+
+var startGame;
+startGame=function(){
+	var request = $.ajax({ cache: false,
+	    url: "/DominionServer/DominionServlet",
+	    data: { operation: 'startGame',
+	    		deck: deck
+	          }
+	});
+
+	request.done(function (data) {
+		console.log(deck)
+	});
+	request.fail(function (jqXHR, textStatus) {
+	    alert(xhr.status);
+	    alert(throwError)
+	});
+	
+	
+};
+
 
 
 //spelers worden automatisch toegevoegd naar wat je hebt gekozen
@@ -120,7 +163,7 @@ function addplayers(number){
         html += '<label for="player'+i+'">';
         html += 'player'+i+'</label>';
         html += '</br>';
-        html += '<input type="text" id="player'+i+'" autocomplete="off" maxlength="20"  placeholder="Name" >';
+        html += '<input type="text" id="player'+i+'" maxlength="20"  placeholder="name" required>';
         html += '</br>';
     }
 
@@ -136,26 +179,37 @@ chooseDeck=function(){
     switch (getId)
     {
         case "firstGame":
-            alert('firstGame');
+        	SendDeck(getId);
+        	goToLastPage();
             break;
         case "bigMoney":
-            alert('bigMoney');
+        	SendDeck(getId);
+        	goToLastPage();
+
             break;
         case "interaction":
-            alert('interaction');
+        	SendDeck(getId);
+        	goToLastPage();
+
             break;
         case "villageSquare":
-            alert('villageSquare');
+        	SendDeck(getId);
+        	goToLastPage();
+
             break;
         case "sizeDistortion":
-            alert('sizeDistortion');
+        	SendDeck(getId);
+        	goToLastPage();
+
             break;
         case "makeOwnDeck":
+        	SendDeck(getId);
+        	
             $('#fifthPageNewGame').toggleClass('hide');
             $('#buildOwnDeckPage').toggleClass('hide');
 
             break;
-
+        
 
     }
 
@@ -195,36 +249,44 @@ function searchGame(){
     }
 
 }
+
+var goToLastPage;
+goToLastPage = function(){
+    $('#fifthPageNewGame').toggleClass('hide');
+    $('#sixtPageNewGame').toggleClass('hide')
+}
+
+
 // delete de toegevoegde html als je terug gaat
 function deleteFoundGame(){
     $(".noGame").remove();
 }
 
 var showChoices = function showMyChoices() {
-        $(":checkbox").change(function(){
-            var checkboxIDs = [];
-            $(":checkbox:checked").each(function(index){
-                checkboxIDs.push($(this).attr('id'));
-            });
-
-            console.log(checkboxIDs);
-
+    $(":checkbox").change(function(){
+        var checkboxIDs = [];
+        $(":checkbox:checked").each(function(index){
+            checkboxIDs.push($(this).attr('id'));
         });
+
+        console.log(checkboxIDs);
+
+    });
 
 };
 
 //Na 7,5 seconden verdwijnt de footer
 setTimeout(function() {
-    $('footer').fadeOut('fast');
+$('footer').fadeOut('fast');
 }, 7500); // <-- time in milliseconds
 
 
 $(document).ready(function(){
 
-    $('button').on('click',goToPAge);
-    $('#fifthPageNewGame').find('button').on('click',chooseDeck);
-    disableAutoComplete();
-    showChoices();
+$('button').on('click',goToPAge);
+$('#fifthPageNewGame').find('button').on('click',chooseDeck);
+
+showChoices();
 
 });
 
