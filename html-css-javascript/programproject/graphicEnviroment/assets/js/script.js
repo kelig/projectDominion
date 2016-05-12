@@ -120,7 +120,7 @@ function addplayers(number){
         html += '<label for="player'+i+'">';
         html += 'player'+i+'</label>';
         html += '</br>';
-        html += '<input type="text" id="player'+i+'" maxlength="20"  placeholder="name" required>';
+        html += '<input type="text" id="player'+i+'" autocomplete="off" maxlength="20"  placeholder="Name" >';
         html += '</br>';
     }
 
@@ -223,7 +223,7 @@ $(document).ready(function(){
 
     $('button').on('click',goToPAge);
     $('#fifthPageNewGame').find('button').on('click',chooseDeck);
-
+    disableAutoComplete();
     showChoices();
 
 });
