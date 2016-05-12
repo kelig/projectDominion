@@ -32,6 +32,8 @@ body {
     user-select: none;
 }
 
+
+
 .hide {
     display:none;
 }
@@ -122,14 +124,14 @@ button:hover {
     left:20px;
     position:absolute;
     top:20px;
-    width:calc(100% - 48vw - 70px);
+    width:30%;
 }
 #right-cards {
     height:100%;
     right:20px;
     position:absolute;
     top:20px;
-    width:calc(70% - 48vw - 70px);
+    width:25%;
 }
 
 #right-cards .card {
@@ -167,9 +169,9 @@ button:hover {
 
 #left-cards .card {
     float:left;
-    height: 12vw;
+    height: 10vw;
     margin-right:10px;
-    width: 7.6vw;
+    width: 6.3vw;
 
 }
 
