@@ -22,7 +22,7 @@ body {
     background-repeat:no-repeat;
     background-size:cover;
     position:fixed;
-        font-size: 2vw;
+    font-size: 1.75rem;
     color: #3E3919 ;
     font-family: halo, halo, halo  sans-serif;
     text-transform: capitalize;
@@ -53,20 +53,35 @@ img{
     width:100%;
 }
 
-#playerName{
-    height:100%;
-    left:55%;
-    top:5%;
-    position:absolute;
-    font-size:5vw;
 
+#playfield{
+    height: 20vw;
+    width:50vw;
+    background-color:white;
+    position:relative;
+    left: 0;
+    right: 0;
+    top: 30%;
+    bottom:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#playerName{
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:3rem;
+}
+.playerName p {
+    margin-bottom:25px;
 }
 
 #actionButtons{
-    height:100%;
-    left:55%;
-    top:25%;
-    position:absolute;
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #actionButtons section{
@@ -77,17 +92,6 @@ img{
     display:inline-block;
 }
 
-#actionButtons .row-1{
-}
-
-#actionButtons .row-2{
-
-}
-
-#actionButtons .row-3{
-    margin:5px;
-
-}
 
 button {
     font-family: halo, halo, halo  sans-serif;
@@ -111,11 +115,11 @@ button:hover {
 }
 
 #used-unused {
-    height:100%;
-    left:20px;
-    position:absolute;
-    top:60%;
-    width:calc(100% - 48vw - 70px);
+    position: absolute;
+    width:20%;
+    left:15%;
+    bottom:0;
+
 }
 
 
@@ -124,14 +128,14 @@ button:hover {
     left:20px;
     position:absolute;
     top:20px;
-    width:30%;
+    width:15%;
 }
 #right-cards {
     height:100%;
     right:20px;
     position:absolute;
     top:20px;
-    width:25%;
+    width:20%;
 }
 
 #right-cards .card {
@@ -146,7 +150,7 @@ button:hover {
     left:50%;
     margin-left:-100px;
     position:relative;
-    top:30vw;
+    top:5vw;
     width:200px;
 }
 
@@ -161,17 +165,17 @@ button:hover {
 
 #used-unused .card {
     float:left;
-    height: 12vw;
+    height: 6vw;
     margin-right:10px;
-    width: 7.6vw;
+    width: 3.8vw;
 
 }
 
 #left-cards .card {
     float:left;
-    height: 10vw;
-    margin-right:10px;
-    width: 6.3vw;
+    height: 9vw;
+    width: 5.97vw;
+    margin-bottom:1%;
 
 }
 
