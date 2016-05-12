@@ -77,13 +77,7 @@ goToPAge=function(){
 
 
 
-/*
-$('#sendPlayers').click(function(){
-if($.trim($('#player').val()) == ''){
-    alert('Input can not be left blank');
-}
-});
-*/
+
 
 
 // met ajax de spelers verzenden naar de servlet.
