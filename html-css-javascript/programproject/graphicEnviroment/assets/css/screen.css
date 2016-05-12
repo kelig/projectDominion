@@ -158,7 +158,22 @@ input[type="checkbox"] + label {
     vertical-align: middle;
 }
 
+input[type="text"] {
+    background-color: transparent;
+    color:#FFFFFF;
+    border-color:#3E3919;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-appearance: none;
+}
 
+
+iput[type="text"]:focus {
+    outline: none;
+    border-color: #3E3919;
+    box-shadow: 0 0 10px #3E3919;
+
+}
 /*------------------------*/
 /* PAGE SPECIFIC ELEMENTS */
 /*------------------------*/
@@ -182,7 +197,7 @@ form{
 
 a{
     text-decoration: none;
-    color: #6E6C6C;
+    color: #3E3919;
 }
 
 a:active {
