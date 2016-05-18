@@ -286,7 +286,7 @@ $(document).ready(function(){
 
     $('button').on('click',goToPAge);
     $('#fifthPageNewGame').find('button').on('click',chooseDeck);
-    disableAutoComplete();
+    $('input').attr('autocomplete','off');
     showChoices();
 
 });
