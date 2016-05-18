@@ -19,19 +19,16 @@
 
     <section id="used-unused">
             <div class="stackPile">
+                <span></span>
                 <div class="card">
-                    <img src="images/BackSide.jpg">
+                    <img src="images/Draw.jpg">
                 </div>
             </div>
             <div class="playedPile">
                 <div class="card">
-                    <img src="images/BackSide.jpg">
+                    <img src="images/Discard.jpg">
                 </div>
             </div>
-            <div class="trash">
-
-            </div>
-
     </section>
 
 
@@ -43,20 +40,29 @@
             <img src="images/Trash.jpg">
         </div>
     </section>
-
     <!-- Coins en Eigendomkaarten, ook Curse  /END-->
 
+    <section id="tutorial">
+            <button id="questionMark">?</button>
+    </section>
+    <!-- Huidige Speler en buttons START-->
+    <section id="actionButtons">
+        <div class="row-1">
+            <button id="endTurn">End Turn</button>
+        </div>
 
-    <!-- Huidige Speler  START-->
+    </section>
+
+
     <section id="playerName">
         <div class="playerName">
             <p>Stijn</p>
         </div>
     </section>
-    <!-- Huidige Speler  /END-->
+    <!-- Huidige Speler en buttons  /END-->
 
-    <!-- Actieknoppen en Overzicht van mogelijke zetten  START-->
-    <section id="actionButtons">
+    <!-- Overzicht van mogelijke zetten  START-->
+    <section id="actionOverview">
 
         <div class="row-1">
             <div class="info">
@@ -71,12 +77,22 @@
                 </div>
             </div>
         </div>
+
     </section>
-    <!-- Actieknoppen en Overzicht van mogelijke zetten  /END-->
+    <!-- Overzicht van mogelijke zetten  /END-->
+
+
 
 
     <!-- Speelveld START-->
     <section id="playfield">
+        <div class="playfield">
+            <!--
+            <div class="card">
+
+            </div>
+            -->
+        </div>
 
     </section>
     <!-- Speelveld /END-->
@@ -92,9 +108,14 @@
 
 
     <!-- overlay rond kaart die in het midden staat START-->
-    <div id="overlay" class="hide">
+    <div id="overlay" class="hide"></div>
+    <div id="overlayTutorial" class="hide">
+        <div id="showTutorial">
+            <img src="assets/media/DominionTut.jpg">
+        </div>
 
     </div>
+
     <div id="cardBoxedAr" class="hide">
         <div id="showCard">
 
@@ -107,5 +128,7 @@
 
 <script type="text/javascript" src=assets/js/jquery-2.1.4.js></script>
 <script type="text/javascript" src="assets/js/gameVisuals.js"></script>
+<script type="text/javascript" src="assets/js/ajaxcallsGame.js"></script>
+
 </body>
 </html>
