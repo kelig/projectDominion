@@ -7,9 +7,9 @@ var buys = 1;
 var actions = 1;
 
 var actionButtons = function(){
-    document.getElementById('coins').innerHTML=coins;
-    document.getElementById('buys').innerHTML=buys;
-    document.getElementById('actions').innerHTML=actions;
+    document.getElementById('#coins').innerHTML=coins;
+    document.getElementById('#buys').innerHTML=buys;
+    document.getElementById('#actions').innerHTML=actions;
 
 };
 
@@ -73,12 +73,29 @@ var cardToPlayfield = function() {
     var CardUrl = $(this).attr('src');
 
     var Cardhtml = '<div class="card"><img src="'+CardUrl+'"/>';
+    // waarde van de card bij coins tellen
+    switch($(this).parent().data('card')){
+        case "Copper":
+            coins+=1;
+            break;
+        case "Silver":
+            coins += 3;
+            break;
+        case "Gold":
+            coins += 6;
+    }
+    console.log(coins);
 
     $("#playfield .card").css('left', '+=40%');
 
     $( Cardhtml).appendTo( $( ".playfield" ) );
 
     $(this).closest('.card').remove();
+    var html = '<p>Coins:</p>';
+    html += '<span id="coins">' + coins +  '</span>';
+    $(".info .coins").html(html);
+
+
 };
 
 
