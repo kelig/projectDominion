@@ -10,15 +10,14 @@ var actionButtons = function(){
     document.getElementById('#coins').innerHTML=coins;
     document.getElementById('#buys').innerHTML=buys;
     document.getElementById('#actions').innerHTML=actions;
-
 };
-
 
 
 //Gekozen kaarten komen hier
 var Deck = ["Cellar","Market","Militia","Mine","Moat","Remodel","Smithy","Village","Woodcutter","Workshop"];
 var Coins = ["Curse","Estate","Copper","Duchy","Silver","Province","Gold"];
 var Hand = ["Estate","Estate","Copper","Copper","Copper"];
+var players = ["stijn","zeger","shan","brecht"]
 
 
 //de gekozen kaarten worden op de juiste plaats gezet
@@ -37,7 +36,6 @@ var generateDeck = function(){
 };
 
 
-
 //de coins kaarten worden ingevoegd en  ook op de juiste plaats gezet
 var generateCoins = function(){
 
@@ -52,7 +50,6 @@ var generateCoins = function(){
 
         $("#right-cards").append(html);
     }
-
 };
 
 
@@ -77,12 +74,13 @@ var cardToPlayfield = function() {
     switch($(this).parent().data('card')){
         case "Copper":
             coins+=1;
+
             break;
         case "Silver":
-            coins += 3;
+            coins += 2;
             break;
         case "Gold":
-            coins += 6;
+            coins += 3;
     }
     console.log(coins);
 
@@ -94,11 +92,7 @@ var cardToPlayfield = function() {
     var html = '<p>Coins:</p>';
     html += '<span id="coins">' + coins +  '</span>';
     $(".info .coins").html(html);
-
-
 };
-
-
 
 //als je op een kaart klikt dat je kan kopen (links boven), dan komt die in de midden van het scherm, met een overlay er rond
 var showBigCard = function(){
@@ -109,7 +103,6 @@ var showBigCard = function(){
 
     var Cardhtml = '<img src="'+CardUrl+'"/>';
     $('#showCard').append(Cardhtml);
-
 };
 //de grote kaart van het scherm doen
 var hideBigCard = function(){
@@ -118,7 +111,6 @@ var hideBigCard = function(){
 
     $('#showCard').empty();
 };
-
 
 //tutorial op het scherm tonen
 var showTutorialOverlay = function(){
@@ -134,9 +126,19 @@ var hideTutorialOverlay = function(){
 
     $('#overlayTutorial').addClass('hide');
     $('#overlay').addClass('hide');
-
-    console.log("hallo2");
 };
+
+
+
+function switchplayer(){
+
+/*
+*
+* */
+
+
+};
+
 
 $(document).ready(function(){
     console.log("Ok!");
@@ -150,7 +152,7 @@ $(document).ready(function(){
 
     $('#tutorial').on('click', showTutorialOverlay);
     $('#overlay').on('click', hideTutorialOverlay);
-
+    $('#endTurn').on('click',switchplayer);
 
 });
 //Disable f5 & f6 key & drag
