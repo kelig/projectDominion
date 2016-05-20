@@ -2,6 +2,7 @@
  * Created by Stijn on 12/05/2016.
  */
 
+
 function buyCall(){
     card=$(this).data('card');
     var request = $.ajax({ cache: false,
@@ -17,7 +18,10 @@ function buyCall(){
     request.fail(function (jqXHR, textStatus) {
         alert('an error occurred while communicating with the server, please reload the page and try again')
     });
+
+
 }
+
 
 function handCall(){
     card=$(this).data('card');
@@ -31,9 +35,12 @@ function handCall(){
     request.done(function (data) {
         console.log(card)
     });
+
     request.fail(function (jqXHR, textStatus) {
         alert('an error occurred while communicating with the server, please reload the page and try again')
     });
+
+
 }
 
 function endTurn(){
@@ -53,6 +60,7 @@ function endTurn(){
 
 
 }
+
 
 $(document).ready(function(){
     $('.buy').on('click',buyCall);
